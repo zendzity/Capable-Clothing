@@ -183,11 +183,27 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type='radio'] + label {
-  border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
+  /*border: var(--variant-pills-border-width) solid rgba(var(--color-foreground), var(--variant-pills-border-opacity));
   background-color: rgb(var(--color-background));
   color: rgba(var(--color-foreground));
   border-radius: var(--variant-pills-radius);
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-foreground));*/
+  display: flex;
+align-items: center;
+ font-family: Open Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: 0.04em;
+text-align: center;
+color:#000000;
+width: 136px;
+height: 50px;
+ background: #FFFFFF;
+border: 1px solid #C4C4C4;
+box-sizing: border-box;
+
   display: inline-block;
   margin: 0.7rem 0.5rem 0.2rem 0;
   padding: 1rem 2rem;
@@ -217,8 +233,9 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type='radio']:checked + label {
-  background-color: rgb(var(--color-foreground));
-  color: rgb(var(--color-background));
+ background: #FFF2F2;
+border: 1px solid #FE0D0E;
+box-sizing: border-box;
 }
 
 @media screen and (forced-colors: active) {
@@ -1155,3 +1172,15 @@ a.product__text {
   display: block;
   padding-bottom: 100%;
 }
+legend.form__label
+  {
+    font-family: Open Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: -0.01em;
+text-align: left;
+    color:#000000;
+
+  }

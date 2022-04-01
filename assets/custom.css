@@ -530,3 +530,169 @@
    .innerlogoitem {display:inline;text-align:center;}
    .collage__item--left:nth-child(3n - 1):last-child{height:auto;}
 }
+/* Product Page */
+
+h1.product__title
+{
+  font-family: Open Sans;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 48px;
+letter-spacing: -0.03em;
+text-align: left;
+
+}
+
+.product .price__regular .price-item--regular
+{font-family: Open Sans;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: 36px;
+letter-spacing: -0.03em;
+text-align: left;
+color: #FE0D0E;
+}
+.mtaxincluded
+{
+  font-family: Open Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: -0.03em;
+text-align: left;
+color: black;
+}
+.product__description
+{
+  font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 200%;
+/* or 36px */
+
+letter-spacing: -0.01em;
+
+color: #000000;
+}
+.product-form__submit
+{
+  text-transform: uppercase;
+  background: #FE0D0E;
+  font-family: Open Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 800;
+line-height: 16px;
+letter-spacing: 0.04em;
+text-align: center;
+}
+.minnerlogoitem
+{
+  text-align:left;
+}
+.msinglelogoitem{flex-grow: 1;}
+.msinglelogoitem .logo
+{
+  font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -.01em;
+    color: #000;
+  	display: flex;
+    align-items: center;
+   margin-top:10px;
+}
+.msinglelogoitem .logo img
+{margin-right:20px;
+}
+.accordion__title
+{
+  color:#000;
+  font-family: Open Sans;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: -0.01em;
+text-align: left;
+
+}
+
+          .donate-container
+          {
+            width:100%;
+            padding: 10px;
+            background: #FCF1F1;
+            display:block;
+            
+          }
+.donate-inner
+{
+  display:flex;
+  align-items:center;
+  
+}
+.donate-icon
+{
+   font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -.01em;
+    color: #000;
+  	display: flex;
+    align-items: center;
+  
+
+}
+          .mdonate-text
+          {
+            color:#0E1C2C;
+          font-family: Open Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.01em;
+text-align: left;
+            margin-left:5px;
+
+          }
+          .donate_link
+          {
+            color: #FE0D0E;
+
+            font-family: Open Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0.04em;
+           margin-left:auto;
+     order: 2;
+
+
+          }
+.mtestimonial
+{
+  width:100%;
+  display:block;
+}
+
+h2.title.mh2
+{
+  font-family: Open Sans;
+font-size: 20px;
+font-weight: 600;
+line-height: 26px;
+letter-spacing: -0.01em;
+text-align: left;
+
+}

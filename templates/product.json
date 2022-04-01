@@ -3,27 +3,28 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
         },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
-        },
         "price": {
           "type": "price",
           "settings": {}
+        },
+        "caption": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "+tax +shipping",
+            "text_style": "body"
+          }
+        },
+        "b16d2318-6054-473f-b222-bb5365ab894e": {
+          "type": "popup",
+          "settings": {
+            "text": "Size Chart",
+            "page": ""
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -38,18 +39,79 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": false
           }
         },
-        "description": {
-          "type": "description",
+        "10e08b88-5ce7-4528-b2ce-d1a448aab537": {
+          "type": "donate",
+          "settings": {
+            "donate_icon": "shopify:\/\/shop_images\/heart_2.png",
+            "donate_text": "Buy 2, donate one to Veteran",
+            "donate_label": "Donate"
+          }
+        },
+        "8ae6bf52-f0f5-4fd8-a083-c61ef8036f41": {
+          "type": "features",
           "settings": {}
         },
-        "collapsible-row-0": {
+        "5ea94b09-2bdb-4c8f-9b09-00ef4eb92fd3": {
+          "type": "how-it-works",
+          "settings": {
+            "m-main-heading": "HOW ITS WORKS",
+            "mheading1": "Gain more independence",
+            "mhw1image": "shopify:\/\/shop_images\/hand_1.png",
+            "mheading2": "Saves your skin from pressure sores",
+            "mhw2image": "shopify:\/\/shop_images\/skin-protection.png",
+            "mheading3": "Reduce injuries",
+            "mhw3image": "shopify:\/\/shop_images\/heart_2.png",
+            "mheading4": ""
+          }
+        },
+        "c2600f3c-b96c-4894-8f16-10c4a35ac85f": {
+          "type": "testimonials",
+          "settings": {
+            "main-title": "Testimonials from users\/caregivers",
+            "heading_size": "h2",
+            "background_style": "primary",
+            "color_scheme": "background-1",
+            "padding_top": 36,
+            "padding_bottom": 48,
+            "stars1": 5,
+            "testimonial1": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "image1": "shopify:\/\/shop_images\/Capable_Favicon.png",
+            "title1": "Annette Black",
+            "stars2": 5,
+            "testimonial2": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "title2": "Annette Black",
+            "stars3": 5,
+            "testimonial3": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "title3": "Annette Black",
+            "stars4": 5,
+            "testimonial4": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "title4": "Annette Black",
+            "stars5": 5,
+            "testimonial5": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "title5": "Annette Black",
+            "stars6": 5,
+            "testimonial6": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "title6": "Annette Black",
+            "stars7": 5,
+            "testimonial7": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "title7": "Annette Black"
+          }
+        },
+        "deebbb9b-9e03-45f7-8765-bbb9df034f6c": {
+          "type": "collapsible_description",
+          "settings": {
+            "heading": "Description",
+            "icon": "none"
+          }
+        },
+        "collapsible-row-3": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Materials",
-            "icon": "leather",
+            "heading": "Care",
+            "icon": "none",
             "content": "",
             "page": ""
           }
@@ -57,26 +119,8 @@
         "collapsible-row-1": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
+            "heading": "Shipping",
+            "icon": "none",
             "content": "",
             "page": ""
           }
@@ -89,24 +133,26 @@
         }
       },
       "block_order": [
-        "vendor",
         "title",
-        "caption",
         "price",
+        "caption",
+        "b16d2318-6054-473f-b222-bb5365ab894e",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
+        "10e08b88-5ce7-4528-b2ce-d1a448aab537",
+        "8ae6bf52-f0f5-4fd8-a083-c61ef8036f41",
+        "5ea94b09-2bdb-4c8f-9b09-00ef4eb92fd3",
+        "c2600f3c-b96c-4894-8f16-10c4a35ac85f",
+        "deebbb9b-9e03-45f7-8765-bbb9df034f6c",
         "collapsible-row-3",
+        "collapsible-row-1",
         "share"
       ],
       "settings": {
         "enable_sticky_info": true,
         "gallery_layout": "stacked",
-        "media_size": "large",
+        "media_size": "medium",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -116,6 +162,7 @@
     },
     "image-with-text": {
       "type": "image-with-text",
+      "disabled": true,
       "blocks": {
         "image-with-text-0": {
           "type": "heading",
@@ -149,8 +196,53 @@
         "padding_bottom": 36
       }
     },
+    "1648663417555615ff": {
+      "type": "testimonials",
+      "disabled": true,
+      "blocks": {
+        "164866341794a6d0e6-0": {
+          "type": "column",
+          "settings": {
+            "stars": 5,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "image": "shopify:\/\/shop_images\/Capable_Favicon.png",
+            "title": "Annette Black"
+          }
+        },
+        "164866341794a6d0e6-1": {
+          "type": "column",
+          "settings": {
+            "stars": 5,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "title": "Annette Black"
+          }
+        },
+        "164866341794a6d0e6-2": {
+          "type": "column",
+          "settings": {
+            "stars": 5,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "title": "Annette Black"
+          }
+        }
+      },
+      "block_order": [
+        "164866341794a6d0e6-0",
+        "164866341794a6d0e6-1",
+        "164866341794a6d0e6-2"
+      ],
+      "settings": {
+        "title": "What people say about our jeans",
+        "heading_size": "h1",
+        "background_style": "primary",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn": {
       "type": "multicolumn",
+      "disabled": true,
       "blocks": {
         "column-0": {
           "type": "column",
@@ -212,6 +304,7 @@
   "order": [
     "main",
     "image-with-text",
+    "1648663417555615ff",
     "multicolumn",
     "product-recommendations"
   ]
