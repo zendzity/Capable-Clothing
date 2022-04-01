@@ -3,26 +3,33 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
+        "c7a63b2e-49e6-41ad-9154-d08292200d9f": {
+          "type": "text",
+          "settings": {
+            "text": "CAPABLE CLOTHING",
+            "text_style": "subtitle"
+          }
+        },
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Fashionable Denim That Saves Your Skin",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Designed by Caregiver - Made in USA",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Learn More About These Jeans",
             "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
+            "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -30,15 +37,17 @@
         }
       },
       "block_order": [
+        "c7a63b2e-49e6-41ad-9154-d08292200d9f",
         "heading",
         "text",
         "button"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_2_bb223ab0-5d4c-47e3-93bc-3fb050d6f706.png",
         "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image_height": "medium",
         "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
@@ -47,148 +56,104 @@
         "show_text_below": false
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+    "1648580421c7a592ae": {
+      "type": "logo-items",
       "blocks": {
-        "heading": {
+        "16485804212d9a93fe-0": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading": "Patented Design",
+            "image": "shopify:\/\/shop_images\/contract_1.png"
           }
         },
-        "text": {
-          "type": "text",
+        "16485804212d9a93fe-1": {
+          "type": "heading",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "heading": "Gain Independence",
+            "image": "shopify:\/\/shop_images\/hand_1.png"
+          }
+        },
+        "16485804212d9a93fe-2": {
+          "type": "heading",
+          "settings": {
+            "heading": "Comfort and Safety",
+            "image": "shopify:\/\/shop_images\/heart_2.png"
+          }
+        },
+        "16485804212d9a93fe-3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Made in the USA",
+            "image": "shopify:\/\/shop_images\/usa_1.png"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "16485804212d9a93fe-0",
+        "16485804212d9a93fe-1",
+        "16485804212d9a93fe-2",
+        "16485804212d9a93fe-3"
       ],
-      "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
+      "settings": {}
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
+    "1648368592b991d730": {
+      "type": "image-text-bar",
+      "disabled": true,
       "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
+        "16483685925b36574b-0": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/hand_1.png",
+            "title": "Patented Design",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column2": {
+        "16483685925b36574b-1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/hand_1.png",
+            "title": "Gain Independence",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "column3": {
+        "16483685925b36574b-2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/heart_2.png",
+            "title": "Comfort and Safety",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "34520c83-8fce-4455-9751-fd51db6fc7af": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/usa_1.png",
+            "title": "Made in the USA",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "16483685925b36574b-0",
+        "16483685925b36574b-1",
+        "16483685925b36574b-2",
+        "34520c83-8fce-4455-9751-fd51db6fc7af"
       ],
       "settings": {
         "title": "",
         "heading_size": "h1",
-        "image_width": "third",
+        "image_width": "tenth",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
+        "columns_desktop": 4,
+        "column_alignment": "left",
         "background_style": "none",
         "button_label": "",
         "button_link": "",
@@ -198,14 +163,347 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "1648375697e0be2385": {
+      "type": "testimonials",
+      "blocks": {
+        "1648375697942bc8d2-0": {
+          "type": "column",
+          "settings": {
+            "stars": 4,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "title": "Annette Black"
+          }
+        },
+        "9c1d381a-a7c4-4c50-963a-668a10f32e1b": {
+          "type": "column",
+          "settings": {
+            "stars": 5,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "title": "Annette Black"
+          }
+        },
+        "156beb17-0438-4a25-a7ae-ff588cb2b624": {
+          "type": "column",
+          "settings": {
+            "stars": 5,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "title": "Annette Black"
+          }
+        },
+        "9a18119b-e0ed-42ee-b877-298a97e776e0": {
+          "type": "column",
+          "settings": {
+            "stars": 5,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "title": "Annette Black"
+          }
+        },
+        "21d6c40d-b638-4007-ac71-2b6b5f751582": {
+          "type": "column",
+          "settings": {
+            "stars": 5,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "title": "Annette Black"
+          }
+        },
+        "7a352ebf-63c9-40f9-b9a9-b949ca338be3": {
+          "type": "column",
+          "settings": {
+            "stars": 5,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "title": "Annette Black"
+          }
+        },
+        "355325b3-1b7d-4f04-9d4c-baff60d4f1e0": {
+          "type": "column",
+          "settings": {
+            "stars": 5,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "title": "Annette Black"
+          }
+        },
+        "1f9a56bf-d9f8-4036-9822-a4e4a59f7d5a": {
+          "type": "column",
+          "settings": {
+            "stars": 5,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "title": "Annette Black"
+          }
+        },
+        "bc601542-01da-44ca-aba7-916dcf92aa5f": {
+          "type": "column",
+          "settings": {
+            "stars": 5,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "title": "Annette Black"
+          }
+        },
+        "401fc3b6-9aa0-4fba-8034-7e41c7f64d63": {
+          "type": "column",
+          "settings": {
+            "stars": 5,
+            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
+            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "title": "Annette Black"
+          }
+        }
+      },
+      "block_order": [
+        "1648375697942bc8d2-0",
+        "9c1d381a-a7c4-4c50-963a-668a10f32e1b",
+        "156beb17-0438-4a25-a7ae-ff588cb2b624",
+        "9a18119b-e0ed-42ee-b877-298a97e776e0",
+        "21d6c40d-b638-4007-ac71-2b6b5f751582",
+        "7a352ebf-63c9-40f9-b9a9-b949ca338be3",
+        "355325b3-1b7d-4f04-9d4c-baff60d4f1e0",
+        "1f9a56bf-d9f8-4036-9822-a4e4a59f7d5a",
+        "bc601542-01da-44ca-aba7-916dcf92aa5f",
+        "401fc3b6-9aa0-4fba-8034-7e41c7f64d63"
+      ],
+      "settings": {
+        "title": "What people say about our jeans",
+        "heading_size": "h0",
+        "background_style": "primary",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1648399903389c0ae5": {
+      "type": "multicolumn",
+      "blocks": {
+        "16483999030e956bd4-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_4.png",
+            "title": "",
+            "text": "<p>Capable Clothing was founded in 2011 by Temeka Norris RN, to highlight the abilities of individuals living with handicaps, as opposed their disabilities.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "16483999030e956bd4-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_5.png",
+            "title": "",
+            "text": "<p>Capable Clothing designs are made to assist individuals with limited abilities, (<strong>spinal cord injury, ostomy bags, rheumatoid arthritis, and the elderly<\/strong>) gain a more independent lifestyle, and reduce injury, and skin breakdown. Capable Clothing also assist the care givers of these individuals by designing clothing that reduce lifting and turning, thus reducing back strain and injury.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "16483999030e956bd4-0",
+        "16483999030e956bd4-1"
+      ],
+      "settings": {
+        "title": "About Capable Clothing",
+        "heading_size": "h0",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 48,
+        "padding_bottom": 36
+      }
+    },
+    "1648401389dabc0606": {
+      "type": "collection-list",
+      "blocks": {
+        "16484013892dda62d7-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "jeans"
+          }
+        },
+        "16484013892dda62d7-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "t-shirts"
+          }
+        },
+        "16484013892dda62d7-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "let-strap"
+          }
+        },
+        "7f1e5350-1cf1-4e1d-9b02-b25253dfae7c": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "decals"
+          }
+        }
+      },
+      "block_order": [
+        "16484013892dda62d7-0",
+        "16484013892dda62d7-1",
+        "16484013892dda62d7-2",
+        "7f1e5350-1cf1-4e1d-9b02-b25253dfae7c"
+      ],
+      "settings": {
+        "title": "Shop all",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "background-2",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 48
+      }
+    },
+    "16484038412afb6837": {
+      "type": "tiktok",
+      "blocks": {
+        "1648403841b6b255a2-0": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_54.png",
+            "title": "https:\/\/www.tiktok.com\/"
+          }
+        },
+        "1648403841b6b255a2-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_55.png",
+            "title": "https:\/\/www.tiktok.com\/"
+          }
+        },
+        "1648403841b6b255a2-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_56.png",
+            "title": "https:\/\/www.tiktok.com\/"
+          }
+        },
+        "d247ef23-283a-445e-b30e-db9c975ba894": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_57.png",
+            "title": "https:\/\/www.tiktok.com\/"
+          }
+        },
+        "bd613ec8-f8ea-46af-b469-8114d8b0265b": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_58.png",
+            "title": "https:\/\/www.tiktok.com\/"
+          }
+        },
+        "360ca922-647a-4cf6-9c86-8e1b12d35067": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_54.png",
+            "title": "htps:\/\/www.tiktok.com\/"
+          }
+        }
+      },
+      "block_order": [
+        "1648403841b6b255a2-0",
+        "1648403841b6b255a2-1",
+        "1648403841b6b255a2-2",
+        "d247ef23-283a-445e-b30e-db9c975ba894",
+        "bd613ec8-f8ea-46af-b469-8114d8b0265b",
+        "360ca922-647a-4cf6-9c86-8e1b12d35067"
+      ],
+      "settings": {
+        "title": "Popular on",
+        "heading_size": "h1",
+        "background_style": "primary",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "164840163035ef2620": {
+      "type": "collage",
+      "blocks": {
+        "80262df3-f38f-40a8-ad2c-b6845b12a3df": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_60.png",
+            "url": "https:\/\/facebook.com",
+            "image_padding": false
+          }
+        },
+        "6331c1eb-6c72-444c-acb6-7b63987f4c89": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_61.png",
+            "url": "https:\/\/facebook.com",
+            "image_padding": false
+          }
+        },
+        "65c212a0-fb37-4706-a3b5-a3c89ed86b42": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_63.png",
+            "url": "https:\/\/facebook.com",
+            "image_padding": false
+          }
+        },
+        "f31325bb-acf2-4409-918b-32088900c5bc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_62.png",
+            "url": "https:\/\/facebook.com",
+            "image_padding": false
+          }
+        },
+        "cf869ffa-e04a-4fb9-af4d-c7d628e4519c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_64.png",
+            "url": "https:\/\/facebook.com",
+            "image_padding": false
+          }
+        }
+      },
+      "block_order": [
+        "80262df3-f38f-40a8-ad2c-b6845b12a3df",
+        "6331c1eb-6c72-444c-acb6-7b63987f4c89",
+        "65c212a0-fb37-4706-a3b5-a3c89ed86b42",
+        "f31325bb-acf2-4409-918b-32088900c5bc",
+        "cf869ffa-e04a-4fb9-af4d-c7d628e4519c"
+      ],
+      "settings": {
+        "heading": "See our community",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "1648580421c7a592ae",
+    "1648368592b991d730",
+    "1648375697e0be2385",
+    "1648399903389c0ae5",
+    "1648401389dabc0606",
+    "16484038412afb6837",
+    "164840163035ef2620"
   ]
 }

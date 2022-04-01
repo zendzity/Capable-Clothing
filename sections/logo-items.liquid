@@ -1,0 +1,57 @@
+<div class="page-width">
+  <div class="mainlogoitem">
+  <div class="innerlogoitem">
+    {%- for block in section.blocks -%}
+    <div class="singlelogoitem">
+      <div class="logo"><img src="{{ block.settings.image | img_url: 'original' }}" alt="" title=""/>{{block.settings.heading}}</div>      
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "Logo Items",
+  "class": "section",  
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Logo Item",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Image with text",
+          "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
+        },
+        {
+        "type": "image_picker",
+        "id": "image",
+        "label": "t:sections.image-with-text.settings.image.label"
+        }
+      ]
+    }    
+  ],
+  "presets": [
+    {
+      "name": "Logo Items",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+		{
+          "type": "heading"
+        },
+		{
+          "type": "heading"
+        },
+		{
+          "type": "heading"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

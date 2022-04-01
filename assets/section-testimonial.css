@@ -1,0 +1,60 @@
+.testimonial-main .title{font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 130%;
+/* or 62px */
+
+text-align: center;
+letter-spacing: -0.03em;
+
+color: #000201;}
+.testimonial{text-align:center;margin:4rem 0;}
+.authoricon img{display:inline !important;}
+.stars img{display:inline-block !important;}
+.testimonial .fa {color:#FE0D0E;}
+.testimonial .description{font-family: 'Open Sans';
+font-style: italic;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* or 24px */
+
+text-align: center;
+
+color: #0E1C2C;}
+.testimonial .authorname{font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+letter-spacing: -0.01em;
+
+color: #0E1C2C;
+}
+.testimonial-main .slick-slide {
+      margin: 0 40px;
+  }
+
+  /* the parent */
+.testimonial-main .slick-list {
+      margin: 0 -40px;
+  }
+.slick-dots li button:before{color: #FE0D0E !important;width:15px !important;height:15px !important;}
+.slick-dots li button{width:15px !important;height:15px !important;}
+.slick-dots li.slick-active button:before {
+    opacity:1 !important;
+    color: #FE0D0E !important;
+}
+
+.slick-dots li{margin:0 !important;width:15px !important;height:15px !important;}
+.leftarrow{display: block;
+    position: absolute;
+    bottom: -55px;z-index:9999;cursor:pointer;
+    left: 36%;}
+.rightarrow{display: block;
+    position: absolute;cursor:pointer;
+    bottom: -55px;z-index:9999;
+    right: 36%;}
