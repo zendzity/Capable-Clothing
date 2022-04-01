@@ -95,7 +95,7 @@
     "predictive_search_enabled": false,
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
-    "favicon": "shopify:\/\/shop_images\/Capable_Favicon.png",
+    "favicon": "shopify:\/\/shop_images\/RenderedImage.jpg",
     "currency_code_enabled": true,
     "sections": {
       "announcement-bar": {
@@ -107,9 +107,9 @@
         "settings": {
           "color_scheme": "background-1",
           "logo": "shopify:\/\/shop_images\/image_1.png",
-          "logo_width": 150,
+          "logo_width": 100,
           "logo_position": "middle-left",
-          "menu": "primary-menu",
+          "menu": "capable-main-menu",
           "show_line_separator": false,
           "enable_sticky_header": true,
           "margin_bottom": 0
@@ -130,7 +130,7 @@
             "type": "link_list",
             "settings": {
               "heading": "Menu",
-              "menu": "primary-menu"
+              "menu": ""
             }
           },
           "3667bfd3-e175-46ae-a5e6-573717e65f67": {

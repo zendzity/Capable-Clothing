@@ -43,7 +43,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Rectangle_2_bb223ab0-5d4c-47e3-93bc-3fb050d6f706.png",
+        "image": "shopify:\/\/shop_images\/Rectangle_2.png",
         "image_overlay_opacity": 40,
         "image_height": "medium",
         "adapt_height_first_image": false,
@@ -103,7 +103,6 @@
         "16483685925b36574b-0": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hand_1.png",
             "title": "Patented Design",
             "text": "",
             "link_label": "",
@@ -113,7 +112,6 @@
         "16483685925b36574b-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/hand_1.png",
             "title": "Gain Independence",
             "text": "",
             "link_label": "",
@@ -123,7 +121,6 @@
         "16483685925b36574b-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/heart_2.png",
             "title": "Comfort and Safety",
             "text": "",
             "link_label": "",
@@ -133,7 +130,6 @@
         "34520c83-8fce-4455-9751-fd51db6fc7af": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/usa_1.png",
             "title": "Made in the USA",
             "text": "",
             "link_label": "",
@@ -172,7 +168,7 @@
           "settings": {
             "stars": 4,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "image": "shopify:\/\/shop_images\/Ellipse_7.png",
             "title": "Annette Black"
           }
         },
@@ -181,7 +177,7 @@
           "settings": {
             "stars": 5,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "image": "shopify:\/\/shop_images\/Ellipse_7_1.png",
             "title": "Annette Black"
           }
         },
@@ -190,52 +186,52 @@
           "settings": {
             "stars": 5,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "image": "shopify:\/\/shop_images\/Ellipse_7_2.png",
             "title": "Annette Black"
           }
         },
         "9a18119b-e0ed-42ee-b877-298a97e776e0": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "stars": 5,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Group_1035.png",
             "title": "Annette Black"
           }
         },
         "21d6c40d-b638-4007-ac71-2b6b5f751582": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "stars": 5,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Group_1035.png",
             "title": "Annette Black"
           }
         },
         "7a352ebf-63c9-40f9-b9a9-b949ca338be3": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "stars": 5,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Group_1035.png",
             "title": "Annette Black"
           }
         },
         "355325b3-1b7d-4f04-9d4c-baff60d4f1e0": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "stars": 5,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Group_1035.png",
             "title": "Annette Black"
           }
         },
         "1f9a56bf-d9f8-4036-9822-a4e4a59f7d5a": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "stars": 5,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Group_1035.png",
             "title": "Annette Black"
           }
         },
@@ -244,7 +240,7 @@
           "settings": {
             "stars": 5,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "image": "shopify:\/\/shop_images\/Ellipse_7_1.png",
             "title": "Annette Black"
           }
         },
@@ -253,7 +249,7 @@
           "settings": {
             "stars": 5,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Group_1035.png",
+            "image": "shopify:\/\/shop_images\/Ellipse_7.png",
             "title": "Annette Black"
           }
         }
@@ -342,7 +338,7 @@
         "16484013892dda62d7-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "let-strap"
+            "collection": "leg-strap"
           }
         },
         "7f1e5350-1cf1-4e1d-9b02-b25253dfae7c": {
@@ -412,7 +408,7 @@
         "360ca922-647a-4cf6-9c86-8e1b12d35067": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_54.png",
+            "image": "shopify:\/\/shop_images\/Rectangle_55.png",
             "title": "htps:\/\/www.tiktok.com\/"
           }
         }
