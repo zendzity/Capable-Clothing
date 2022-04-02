@@ -14,8 +14,6 @@
    color: #FE0D0E;
 }
 .header__menu-item span{
-   font-family: 'Roboto';
-   font-style: normal;
    font-weight: 600;
    font-size: 13px;
    line-height: 100%;
@@ -42,8 +40,6 @@
    color: #FF0201;
 }
 .banner__box .banner__heading{
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 700;
    font-size: 56px;
    line-height: 130%;
@@ -52,8 +48,6 @@
    color: #FFFFFF;
 }
 .banner__box .body {
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 600;
    font-size: 28px;
    line-height: 150%;
@@ -68,8 +62,6 @@
    max-width: 85rem !important;
 }
 .banner__box .button{
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 800;
    font-size: 16px;
    line-height: 100%;
@@ -87,8 +79,6 @@
    left:1%;
 }
 .tiktok-main .title{
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 600;
    font-size: 32px;
    line-height: 130%;
@@ -99,8 +89,6 @@
    display:none;
 }
 .collage-wrapper-title{
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 600;
    font-size: 32px;
    line-height: 130%;
@@ -108,7 +96,6 @@
    color: #000201;
 }
 .collection-list .card__heading{
-   font-family: 'Open Sans';
    font-style: italic;
    font-weight: 600;
    font-size: 36px;
@@ -118,8 +105,6 @@
    color: #FFFFFF;
 }
 .collage-wrapper-title span{
-   font-family: 'Suisse BP Int'l';
-   font-style: normal;
    font-weight: 400;
    font-size: 28px;
    line-height: 120%;
@@ -136,8 +121,6 @@
    float:right;
 }
 .rightwithlink a{
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 600;
    font-size: 20px;
    line-height: 100%;
@@ -152,8 +135,6 @@
    margin-top:20px;
 }
 .mynewsletterbutton{
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 700;
    font-size: 16px;
    line-height: 150%;
@@ -166,8 +147,6 @@
    padding: 5px 25px;
 }
 .footer-block__newsletter .footer-block__heading{
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 400;
    font-size: 16px;
    line-height: 150%;
@@ -183,8 +162,6 @@
    margin-left: 10px;
 }
 .list-social__link{
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 400;
    font-size: 14px;
    line-height: 250%;
@@ -222,8 +199,6 @@
    flex-grow: 1;
 }
 .singlelogoitem .logo{
-   font-family: Open Sans;
-   font-style: normal;
    font-weight: 600;
    font-size: 16px;
    line-height: 120%;
@@ -240,8 +215,6 @@
    height:269px;
 }
 .multi-column-custom-title {
-   font-family: Open Sans;
-   font-style: normal;
    font-weight: 600;
    font-size: 48px;
    line-height: 130%;
@@ -252,7 +225,6 @@
    width: 100%;
 }
 .multicolumn-list li:first-child p {
-   font-family: 'Open Sans';
    font-style: italic;
    font-weight: 400;
    font-size: 28px;
@@ -264,8 +236,6 @@
    color: #FE0D0E !important;
 }
 .multicolumn-list li:last-child p {
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 300;
    font-size: 16px;
    line-height: 150%;
@@ -275,10 +245,8 @@
 .collection-list-title {
    text-align: center;
    margin: 0 auto !important;
-   font-family: 'Open Sans';
    display: block;
    width: 100%;
-   font-style: normal;
    font-weight: 600;
    font-size: 32px;
    line-height: 130%;
@@ -286,8 +254,6 @@
    color: #000201;
 }
 .footer-block__heading {
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 700;
    font-size: 18px;
    line-height: 150%;
@@ -298,16 +264,12 @@
    text-underline-offset: 0.3rem;
 }
 .footer-block__heading {
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 700;
    font-size: 18px;
    line-height: 150%;
    color: #F5F5F1;
 }
 .copyright__content {
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 400;
    font-size: 16px;
    line-height: 150%;
@@ -371,8 +333,6 @@
       justify-self: end !important;
    }
    .banner__box .banner__heading{
-      font-family: 'Open Sans';
-      font-style: normal;
       font-weight: 700;
       font-size: 32px;
       line-height: 140%;
@@ -381,8 +341,6 @@
       color: #FFFFFF;
    }
    .banner__box .body{
-      font-family: 'Open Sans';
-      font-style: normal;
       font-weight: 600;
       font-size: 20px;
       line-height: 150%;
@@ -392,8 +350,6 @@
       text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.54);
    }
    .banner__box .button{
-      font-family: 'Open Sans';
-      font-style: normal;
       font-weight: 800;
       font-size: 14px;
       line-height: 100%;
@@ -403,8 +359,6 @@
       color: #FFFFFF;
    }
    .multicolumn-list h3, .multicolumn-list p{
-      font-family: 'Open Sans';
-      font-style: normal;
       font-weight: 400;
       font-size: 24px;
       line-height: 120%;
@@ -422,8 +376,6 @@
       padding: 2.5rem 2.5rem 1.5rem 0 !important;
    }
    .testimonial-main .title{
-      font-family: 'Open Sans';
-      font-style: normal;
       font-weight: 600;
       font-size: 32px !important;
       line-height: 150% !important;
@@ -503,8 +455,6 @@
       margin-bottom: 4rem;
       text-align:left !important;
       margin-top:0px !important;
-      font-family: 'Open Sans';
-      font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 150%;
@@ -520,8 +470,6 @@
       text-align: left !important;
    }
    .collection-list .card__heading{
-      font-family: 'Open Sans';
-      font-style: normal;
       font-weight: 600;
       font-size: 24px;
       line-height: 100%;
@@ -569,18 +517,14 @@
 
 /* Product Page */
 h1.product__title {
-   font-family: Open Sans;
    font-size: 32px;
-   font-style: normal;
    font-weight: 600;
    line-height: 48px;
    letter-spacing: -0.03em;
    text-align: left;
 }
 .product .price__regular .price-item--regular {
-   font-family: Open Sans;
    font-size: 28px;
-   font-style: normal;
    font-weight: 600;
    line-height: 36px;
    letter-spacing: -0.03em;
@@ -588,9 +532,7 @@ h1.product__title {
    color: #FE0D0E;
 }
 .mtaxincluded {
-   font-family: Open Sans;
    font-size: 20px;
-   font-style: normal;
    font-weight: 400;
    line-height: 26px;
    letter-spacing: -0.03em;
@@ -598,8 +540,6 @@ h1.product__title {
    color: black;
 }
 .product__description {
-   font-family: 'Open Sans';
-   font-style: normal;
    font-weight: 400;
    font-size: 18px;
    line-height: 200%;
@@ -609,9 +549,7 @@ h1.product__title {
 .product-form__submit {
    text-transform: uppercase;
    background: #FE0D0E;
-   font-family: Open Sans;
    font-size: 16px;
-   font-style: normal;
    font-weight: 800;
    line-height: 16px;
    letter-spacing: 0.04em;
@@ -624,8 +562,6 @@ h1.product__title {
    flex-grow: 1;
 }
 .msinglelogoitem .logo {
-   font-family: Open Sans;
-   font-style: normal;
    font-weight: 600;
    font-size: 16px;
    line-height: 120%;
@@ -640,9 +576,7 @@ h1.product__title {
 }
 .accordion__title {
    color:#000;
-   font-family: Open Sans;
    font-size: 20px;
-   font-style: normal;
    font-weight: 600;
    line-height: 26px;
    letter-spacing: -0.01em;
@@ -659,8 +593,6 @@ h1.product__title {
   align-items:center;
 }
 .donate-icon {
-   font-family: Open Sans;
-   font-style: normal;
    font-weight: 600;
    font-size: 16px;
    line-height: 120%;
@@ -671,9 +603,7 @@ h1.product__title {
 }
 .mdonate-text{
    color:#0E1C2C;
-   font-family: Open Sans;
    font-size: 16px;
-   font-style: normal;
    font-weight: 400;
    line-height: 24px;
    letter-spacing: -0.01em;
@@ -682,9 +612,7 @@ h1.product__title {
 }
 .donate_link {
    color: #FE0D0E;
-   font-family: Open Sans;
    font-size: 16px;
-   font-style: normal;
    font-weight: 600;
    line-height: 24px;
    letter-spacing: 0.04em;
@@ -696,7 +624,6 @@ h1.product__title {
   display:block;
 }
 h2.title.mh2 {
-   font-family: Open Sans;
    font-size: 20px;
    font-weight: 600;
    line-height: 26px;
