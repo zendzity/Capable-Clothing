@@ -696,3 +696,138 @@ letter-spacing: -0.01em;
 text-align: left;
 
 }
+
+/* ======= My custom css ====== */
+.multi-column-custom-title {
+   font-family: Open Sans;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 48px;
+   line-height: 130%;
+   text-align: center;
+   letter-spacing: -.03em;
+   color: #000201;
+   display: block;
+   width: 100%;
+}
+
+.multicolumn-list li:first-child p {
+   font-family: 'Open Sans';
+   font-style: italic;
+   font-weight: 400;
+   font-size: 28px;
+   line-height: 150%;
+   letter-spacing: -0.01em;
+   color: #000201;
+}
+
+.multicolumn-list li:last-child p > strong{
+   color: #FE0D0E !important;
+}
+
+.multicolumn-list li:last-child p{
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.01em;
+color: #000201;
+}
+
+.collection-list-title {
+   text-align: center;
+   margin: 0 auto !important;
+   font-family: 'Open Sans';
+   display: block;
+   width: 100%;
+   font-style: normal;
+   font-weight: 600;
+   font-size: 32px;
+   line-height: 130%;
+   letter-spacing: -0.03em;
+   color: #000201;
+}
+
+.footer-block__heading {
+   font-family: 'Open Sans';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 150%;
+   color: #F5F5F1;
+}
+
+.list-menu__item--active {
+   text-decoration: none !important;
+   text-underline-offset: 0.3rem;
+}
+
+.footer-block__heading {
+   font-family: 'Open Sans';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 150%;
+   color: #F5F5F1;
+}
+
+
+
+@media screen and (min-width: 750px){
+   .background-none .multicolumn-card__image-wrapper {
+      margin-left: -1.5rem !important;
+      margin-right: -1.5rem !important;
+   }
+   .multicolumn-list li:first-child p{
+      padding-right: 50px;
+   }
+}
+
+@media screen and (max-width:768px) {
+   .multicolumn-list li:last-child p, .multicolumn-list li:first-child p{
+      text-align: left;
+   }
+   .mainlogoitem {
+      padding-top: 40px;
+  }
+  .banner__box {
+   padding: 8rem 3.5rem !important;
+  }
+  .multi-column-custom-title{
+     font-size: 36px;
+  }
+}
+
+@media(max-width:450px){
+   
+  .second-mobile-image{
+     display: block;
+  }
+  .second-mobile-image img {
+   width: 98%;
+   display:block;
+   object-fit: cover;
+   height: 300px;
+}
+}
+
+.copyright__content {
+   font-family: 'Open Sans';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 150%;
+   color: #FFFFFF;
+   margin-top: 15px;
+   display: inline-block;
+}
+
+.footer__content-bottom{
+   border-top: 0 !important;
+}
+
+.footer {
+   padding-top: 50px;
+   padding-bottom: 0;
+}

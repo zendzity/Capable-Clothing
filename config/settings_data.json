@@ -130,14 +130,14 @@
             "type": "link_list",
             "settings": {
               "heading": "Menu",
-              "menu": ""
+              "menu": "main-menu"
             }
           },
           "3667bfd3-e175-46ae-a5e6-573717e65f67": {
             "type": "link_list",
             "settings": {
               "heading": "Other",
-              "menu": "footer"
+              "menu": "other"
             }
           },
           "5fbe22d6-13f4-4fe6-a383-d361ee82aea5": {
