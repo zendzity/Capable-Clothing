@@ -56,3 +56,13 @@
 .rich-text__blocks > * + a {
   margin-top: 3rem;
 }
+/* custom */
+.rich-text--full-width .rich-text__blocks {
+  width: 100%;
+  padding: 0 1.5rem;
+}
+.rich-text__blocks .rich-text__text.rte {
+  font-size: 32px;
+  letter-spacing: -0.03em;
+  line-height: 140%;
+}

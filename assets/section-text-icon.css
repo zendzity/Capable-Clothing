@@ -1,0 +1,24 @@
+.rich-text-icon {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	text-align: center;
+}
+.rich-text-icon .h1 {
+	font-size: 32px;
+}
+
+@media (min-width: 750px) {
+	.rich-text-icon .page-width {
+		padding: 0;
+		max-width: 78rem;
+	}
+	.rich-text-icon .rich-text__text {
+		padding: 0 80px;
+	}
+}
+@media (max-width: 749px) {
+	.rich-text-icon {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+}

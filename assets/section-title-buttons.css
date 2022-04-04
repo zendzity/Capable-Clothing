@@ -1,0 +1,47 @@
+.title-buttons-section {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+.title-buttons-section .h1 {
+	font-size: 56px;
+	line-height: 130%;
+	letter-spacing: -0.03em;
+	margin: 0;
+	margin-bottom: 48px;
+}
+.title-buttons-section .button {
+	background: #FE0D0E;
+	text-transform: uppercase;
+	margin: 0 12px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.title-buttons-section .page-width {
+	text-align: center;
+}
+.title-buttons-section .outline-style {
+	background: white;
+	color: #FE0D0E;
+	border: 1px solid #FE0D0E;
+	padding: 0 16px;
+}
+@media (max-width: 749px) {
+	.title-buttons-section .h1 {
+		text-align: center;
+		margin-bottom: 32px;
+		font-size: 32px;
+		line-height: 140%;
+	}
+	.title-buttons-section {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	.title-buttons-section .button {
+		margin: 0;
+	}
+	.title-buttons-section .button-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}

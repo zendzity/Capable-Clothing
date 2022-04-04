@@ -1,0 +1,35 @@
+{{ 'section-text-icon.css' | asset_url | stylesheet_tag }}
+<div class="rich-text-icon color-background-2">
+	<div class="page-width">
+		<img src="{{ section.settings.image | img_url: '40x' }}" alt="{{ section.settings.image.alt }}">
+		<h2 class="h1">{{ section.settings.heading | escape }}</h2>
+		<div class="rich-text__text rte">{{ section.settings.text }}</div>
+	</div>
+</div>
+{% schema %}
+{
+	"name": "Rich text & icon",
+	"settings":[
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading"
+		},
+		{
+			"type": "richtext",
+			"id": "text",
+			"label": "Text"
+		},
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		}
+	],
+	"presets":[
+		{
+			"name": "Rich text & icon"
+		}
+	]
+}
+{% endschema %}

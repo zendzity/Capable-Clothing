@@ -1,0 +1,83 @@
+{{ 'section-special-testimonial.css' | asset_url | stylesheet_tag }}
+<div class="special-testimonial">
+	<div class="page-width color-background-2">
+		<div class="top-wrapper">
+            <img src="{{ section.settings.icon | img_url: '40x' }}" alt="{{ section.settings.icon.alt }}">
+		    <h2 class="h1">{{ section.settings.heading | escape }}</h2>
+        </div>
+        <div class="content flex">
+            {% assign rate = section.settings.image.aspect_ratio %}
+            <div class="content-image">
+                <div class="wrapper" style="padding-bottom: {{ 1 | divided_by: rate | times: 100 }}%;">
+                    {% if section.settings.image %}
+                        <img
+                            class="multicolumn-card__image"
+                            srcset="{%- if section.settings.image.width >= 275 -%}{{ section.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
+                            {%- if section.settings.image.width >= 550 -%}{{ section.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+                            {%- if section.settings.image.width >= 710 -%}{{ section.settings.image | image_url: width: 710 }} 710w,{%- endif -%}
+                            {%- if section.settings.image.width >= 1420 -%}{{ section.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+                            {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+                            src="{{ section.settings.image | image_url: width: 550 }}"
+                            sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
+                            (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
+                            calc(100vw - 30px)"
+                            alt="{{ section.settings.image.alt }}"
+                            height="{{ section.settings.image.height }}"
+                            width="{{ section.settings.image.width }}"
+                            loading="lazy"
+                        >
+                    {% endif %}
+                </div>
+            </div>
+            <div class="content-text">
+                <div class="text">{{ section.settings.text }}</div>
+                <div class="author">{{ section.settings.author }}</div>
+            </div>
+        </div>
+	</div>
+</div>
+{% schema %}
+{
+	"name": "Special testimonial",
+	"settings":[
+        {
+            "type": "header",
+            "content": "Top"
+        },
+        {
+			"type": "image_picker",
+			"id": "icon",
+			"label": "Image"
+		},
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading"
+		},
+        {
+            "type": "header",
+            "content": "Testimonial"
+        },
+        {
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		},
+		{
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+        },
+        {
+            "type": "text",
+            "id": "author",
+            "label": "Author name"
+        }
+	],
+	"presets":[
+		{
+			"name": "Special testimonial"
+		}
+	]
+}
+{% endschema %}

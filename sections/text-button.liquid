@@ -1,0 +1,36 @@
+{{ 'section-text-button.css' | asset_url | stylesheet_tag }}
+<div class="text-button-section color-background-2">
+	<div class="page-width flex">
+		<h2 class="h1">{{ section.settings.heading | escape }}</h2>
+        <div class="button-wrapper">
+            <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+        </div>
+	</div>
+</div>
+{% schema %}
+{
+	"name": "Text & button",
+	"settings":[
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading"
+		},
+		{
+            "type": "text",
+            "id": "button_label",
+            "label": "Button label"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+        }
+	],
+	"presets":[
+		{
+			"name": "Text & button"
+		}
+	]
+}
+{% endschema %}

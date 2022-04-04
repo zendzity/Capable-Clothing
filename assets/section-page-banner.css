@@ -1,0 +1,82 @@
+.page-banner-wrapper {
+	background: #000000;
+	color: #fff;
+	padding-top: 100px;
+}
+.page-banner-wrapper .meta-title {
+	font-family: 'Roboto';
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 1;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: #FF0201;
+}
+.page-banner-wrapper h1 {
+	font-size: 56px;
+	line-height: 130%;
+	letter-spacing: -0.03em;
+	color: #FFFFFF;
+	margin: 0;
+}
+.page-banner-wrapper .content {
+	line-height: 150%;
+	letter-spacing: -0.01em;
+}
+.page-banner-wrapper .content p {
+	margin: 0;
+}
+.page-banner-wrapper .main-wrapper {
+	display: flex;
+	margin-top: 24px;
+}
+.page-banner-wrapper .title, .page-banner-wrapper .content {
+	width: 50%;
+	margin: 0;
+}
+.page-banner-inner:first-child {
+	margin-bottom: 100px;
+}
+.page-banner-wrapper .image {
+	position: relative;
+}
+.page-banner-wrapper .multicolumn-card__image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover
+}
+.page-banner-wrapper .mobile-none-page-width {
+	display: flex;
+}
+@media (max-width: 749px) {
+	.page-banner-wrapper .main-wrapper {
+		flex-direction: column;
+	}
+	.page-banner-wrapper .title, .page-banner-wrapper .content {
+		width: 100%;
+		margin: 0;
+	}
+	.page-banner-wrapper .title {
+		margin-bottom: 16px;
+	}
+	.page-banner-wrapper {
+		padding-top: 72px;
+	}
+	.page-banner-wrapper h1 {
+		font-size: 32px;
+	}
+	.page-banner-inner:first-child {
+		margin-bottom: 40px;
+	}
+	.page-banner-wrapper .mobile-none-page-width {
+		flex-direction: column;
+	}
+	.page-banner-wrapper .mobile-none-page-width.block-1 {
+		padding: 0;
+	}
+	.page-banner-wrapper .main-wrapper {
+		margin-top: 20px;
+	}
+}
+

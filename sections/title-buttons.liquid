@@ -1,0 +1,47 @@
+{{ 'section-title-buttons.css' | asset_url | stylesheet_tag }}
+<div class="title-buttons-section">
+	<div class="page-width">
+		<h2 class="h1">{{ section.settings.heading | escape }}</h2>
+        <div class="button-wrapper">
+            <a href="{{ section.settings.button_link }}" class="button outline-style">{{ section.settings.button }}</a>
+            <a href="{{ section.settings.second_button_link }}" class="button">{{ section.settings.second_button }}</a>
+        </div>
+	</div>
+</div>
+{% schema %}
+{
+	"name": "Title & buttons",
+	"settings":[
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading"
+		},
+		{
+            "type": "text",
+            "id": "button",
+            "label": "Button label"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+        },
+        {
+            "type": "text",
+            "id": "second_button",
+            "label": "Second Button label"
+        },
+        {
+            "type": "url",
+            "id": "second_button_link",
+            "label": "Second Button link"
+        }
+	],
+	"presets":[
+		{
+			"name": "Title & buttons"
+		}
+	]
+}
+{% endschema %}

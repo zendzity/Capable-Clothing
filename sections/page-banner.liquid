@@ -1,60 +1,109 @@
-<section class="our-story-main-wrapper">
-<div class="our-story-inner page-width">
-    <div class="main-wrapper-story">
-        <div class="left-title-our-story">
-            {% if section.settings.metaTitle %}
-            <h5 class="meta-title">{{ section.settings.metaTitle }}</h5>
-            {% endif %}
-            {% if section.settings.title %}
-                <h1>{{ section.settings.title }}</h1>
-            {% endif %}
-        </div>
-        <div class="right-main-story-content">
-            {% if section.settings.text %}
-                {{section.settings.text}}
-            {% endif %}
-        </div>
-    </div>
-</div>
-<div class="story-image-banner page-width mobile-none-page-width">
-    {% if section.settings.image %}
-        <img src="{{ section.settings.image | img_url:"master" }}" title="image" />
-    {% endif %}
-</div>
+{{ 'section-page-banner.css' | asset_url | stylesheet_tag }}
+<section class="page-banner-wrapper">
+	<div class="page-banner-inner page-width">
+		{% if section.settings.metaTitle %}
+			<div class="meta-title">{{ section.settings.metaTitle }}</div>
+		{% endif %}
+		<div class="main-wrapper">
+			<div class="title">
+				{% if section.settings.title %}
+					<h1>{{ section.settings.title }}</h1>
+				{% endif %}
+			</div>
+			<div class="content">
+				{% if section.settings.text %}
+					{{ section.settings.text }}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div class="page-banner-inner page-width mobile-none-page-width block-{{ section.blocks.size }}">
+		{%- liquid
+			assign highest_ratio = 0
+			for block in section.blocks
+				if block.settings.image.aspect_ratio > highest_ratio
+					assign highest_ratio = block.settings.image.aspect_ratio
+				endif
+			endfor
+			assign highest_ratio = highest_ratio | times: section.blocks.size
+		-%}
+		{% for block in section.blocks %}
+			<div class="image">
+				{% if block.settings.image %}
+					<img
+						class="multicolumn-card__image"
+						srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | image_url: width: 275 }} 275w,{%- endif -%}
+						{%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+						{%- if block.settings.image.width >= 710 -%}{{ block.settings.image | image_url: width: 710 }} 710w,{%- endif -%}
+						{%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | image_url: width: 1420 }} 1420w,{%- endif -%}
+						{{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+						src="{{ block.settings.image | image_url: width: 550 }}"
+						sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
+						(min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
+						calc(100vw - 30px)"
+						alt="{{ block.settings.image.alt }}"
+						height="{{ block.settings.image.height }}"
+						width="{{ block.settings.image.width }}"
+						loading="lazy"
+					>
+				{% endif %}
+			</div>
+		{% endfor %}
+	</div>
 </section>
+{%- style -%}
+	.page-banner-wrapper .image {
+		padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;
+		width: calc(100% / {{ section.blocks.size }});
+	}
+	@media (max-width: 749px) {
+		.page-banner-wrapper .image {
+			padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 | times: section.blocks.size }}%;
+			width: 100%;
+		}	
+	}
+{%- endstyle -%}
 {% schema %}
 {
-    "name": "Our Story",
-    "settings":[
-    {
-        "type": "text",
-        "id": "metaTitle",
-        "label": "Meta Title",
-        "default": "Our Story"
-    },
-    {
-        "type": "text",
-        "id": "title",
-        "label": "Title",
-        "default": "About Capable Clothing"
-    },
-    {
-        "type": "richtext",
-        "id":"text",
-        "label": "Main text",
-        "default": "<p>With years of caring for patients who live with spinal cord injuries, founder Temeka Norris RN witnessed many who faced sustaining skin breakdowns by developing skin ulcers, all due to clothing. It was through her experience of being hands-on with patients and what they have endured through the challenges of fitting into clothes, that inspired the Capable Clothing brand in 2011.</p>"
-    },
-    {
-        "type": "image_picker",
-        "id": "image",
-        "label": "Image"
-    }
-    ],
-    "presets":[
-        {
-            "name": "Our Story",
-            "category": "page"
-        }
-    ]
+	"name": "Page Banner",
+	"max_blocks": 3,
+	"settings":[
+	{
+		"type": "text",
+		"id": "metaTitle",
+		"label": "Meta Title",
+		"default": "Our Story"
+	},
+	{
+		"type": "text",
+		"id": "title",
+		"label": "Title",
+		"default": "About Capable Clothing"
+	},
+	{
+		"type": "richtext",
+		"id":"text",
+		"label": "Main text",
+		"default": "<p>With years of caring for patients who live with spinal cord injuries, founder Temeka Norris RN witnessed many who faced sustaining skin breakdowns by developing skin ulcers, all due to clothing. It was through her experience of being hands-on with patients and what they have endured through the challenges of fitting into clothes, that inspired the Capable Clothing brand in 2011.</p>"
+	}
+	],
+	"blocks": [
+	{
+		"type": "image",
+		"name": "Image",
+		"settings": [
+			{
+				"type": "image_picker",
+				"id": "image",
+				"label": "Image"
+			}
+		]
+	}],
+	"presets":[
+		{
+			"name": "Page Banner",
+			"category": "page"
+		}
+	]
 }
 {% endschema %}
