@@ -16,6 +16,12 @@
 	font-size: 14px;
 	font-weight: bold;
 }
+.title-buttons-section .button::after {
+	box-shadow: none;
+}
+.title-buttons-section .button:hover:after {
+	box-shadow: none;
+}
 .title-buttons-section .page-width {
 	text-align: center;
 }

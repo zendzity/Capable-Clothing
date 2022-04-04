@@ -96,70 +96,6 @@
       ],
       "settings": {}
     },
-    "1648368592b991d730": {
-      "type": "image-text-bar",
-      "disabled": true,
-      "blocks": {
-        "16483685925b36574b-0": {
-          "type": "column",
-          "settings": {
-            "title": "Patented Design",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "16483685925b36574b-1": {
-          "type": "column",
-          "settings": {
-            "title": "Gain Independence",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "16483685925b36574b-2": {
-          "type": "column",
-          "settings": {
-            "title": "Comfort and Safety",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "34520c83-8fce-4455-9751-fd51db6fc7af": {
-          "type": "column",
-          "settings": {
-            "title": "Made in the USA",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "16483685925b36574b-0",
-        "16483685925b36574b-1",
-        "16483685925b36574b-2",
-        "34520c83-8fce-4455-9751-fd51db6fc7af"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "tenth",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "1648375697e0be2385": {
       "type": "testimonials",
       "blocks": {
@@ -282,7 +218,6 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_4.png",
-            "image2": "shopify:\/\/shop_images\/Rectangle_60.png",
             "title": "",
             "text": "<p>Capable Clothing was founded in 2011 by Temeka Norris RN, to highlight the abilities of individuals living with handicaps, as opposed their disabilities.<\/p>",
             "link_label": "",
@@ -489,14 +424,13 @@
         "mobile_layout": "collage",
         "color_scheme": "background-1",
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 100
       }
     }
   },
   "order": [
     "image_banner",
     "1648580421c7a592ae",
-    "1648368592b991d730",
     "1648375697e0be2385",
     "1648399903389c0ae5",
     "1648401389dabc0606",

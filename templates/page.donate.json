@@ -1,12 +1,62 @@
 {
-    "sections": {
-      "main": {
-        "type": "page-banner",
-        "settings": {
+  "sections": {
+    "main": {
+      "type": "page-banner",
+      "blocks": {
+        "f237a79b-f57b-4a41-a5d9-63307765b3ae": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DSC_0064.png"
+          }
+        },
+        "bf9ff68f-a02b-4b46-8137-b9896a188abc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_5_1.png"
+          }
+        },
+        "c13c7072-d9ca-464d-ae32-d5cbabcbd17e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/142_0420_1.png"
+          }
         }
+      },
+      "block_order": [
+        "f237a79b-f57b-4a41-a5d9-63307765b3ae",
+        "bf9ff68f-a02b-4b46-8137-b9896a188abc",
+        "c13c7072-d9ca-464d-ae32-d5cbabcbd17e"
+      ],
+      "settings": {
+        "metaTitle": "Donate",
+        "title": "Story from our deepest heart",
+        "text": "<p>I have two brothers that served in the Army.  I’ve  personally known the fear of sending a loved one off to fight a war, and not knowing if they would ever return safe and sound.  Luckily, both of my brothers returned physically unharmed.  However, my oldest brother Kerry didn’t come back home mentally as sound as when he left.  My brother opted to live homeless on the streets of Seattle Washington as many of our veterans do. Unfortunately after many years of living on the streets, my brother was found dead in his tent home.  I don't agree with, nor do I understand why these men and women that sacrifice so much for our country, often end up with so little.  The gifting of Capable jeans to veterans is simply because it's my way of saying thank you for your service, and we here at Capable Clothing are grateful for your service. It's a gift I give in remembrance of my brother.<\/p>"
       }
     },
-    "order": [
-      "main"
-    ]
-  }
+    "16490638444ed47fb3": {
+      "type": "special-testimonial",
+      "settings": {
+        "icon": "shopify:\/\/shop_images\/da21dde662a19a4b8a6e17048660983a.png",
+        "heading": "Testimonials from two veterans",
+        "image": "shopify:\/\/shop_images\/Veteran-_Testimoniald_1.png",
+        "text": "<p>”I am a retired Army Veteran, and when Temeka found out that I was in need, she immediately stepped up and donated a pair of her wonderful jeans to me. I had no idea how much a pair of pants could change my life for the better. I am able to use the restroom without assistance again!  My wife loves the lift loops, because it makes my transfers easier. Thank you Capable Clothing for not forgetting about the wounded veterans of America.”<\/p>",
+        "author": "~  Sylvester B"
+      }
+    },
+    "16490619195f1038b0": {
+      "type": "title-buttons",
+      "settings": {
+        "heading": "Show your support by buying our Adaptable Jeans product",
+        "button": "Contact us",
+        "button_link": "shopify:\/\/pages\/contact-us",
+        "second_button": "Buy Product",
+        "second_button_link": "shopify:\/\/products\/capable-premium-denim-jeans"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16490638444ed47fb3",
+    "16490619195f1038b0"
+  ]
+}

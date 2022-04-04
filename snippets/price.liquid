@@ -47,7 +47,6 @@
       <span class="price-item price-item--regular">
         {{ money_price }}
       </span>
-      
     </div>
     <div class="price__sale">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
@@ -66,7 +65,6 @@
       <span class="price-item price-item--sale price-item--last">
         {{ money_price }}
       </span>
-      
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
@@ -82,7 +80,6 @@
         </span>
       </span>
     </small>
-   
   </div>
   {%- if show_badges -%}
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
