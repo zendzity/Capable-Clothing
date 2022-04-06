@@ -203,6 +203,7 @@
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
             </div>
+            <!-- needed to check taxes and shipping -->
             {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
               <div class="product__tax caption rte">
                 {%- if shop.taxes_included -%}
@@ -213,15 +214,18 @@
                 {%- endif -%}
               </div>
             {%- endif -%}
+            {%- comment -%}
             <div {{ block.shopify_attributes }}>
               {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
                 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
                 {{ form | payment_terms }}
               {%- endform -%}
             </div>
+            {%- endcomment -%}
           {%- when 'description' -%}
             {%- if product.description != blank -%}
               <div class="product__description rte">
+                <div class="product__description-title">{{ block.settings.title }}</div>
                 {{ product.description }}
               </div>
             {%- endif -%}
@@ -237,7 +241,7 @@
                       {{ block.settings.heading | default: block.settings.page.title }}
                     </h2>
                   </div>
-                  {% render 'icon-caret' %}
+                  <div class="icon-caret-wrapper">{% render 'icon-caret' %}</div>
                 </summary>
                 <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
                   {{ block.settings.content }}
@@ -312,36 +316,87 @@
               </details>
             </share-button>
             <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
+          {% when 'men_women' %}
+            {% assign men_product = block.settings.men_product %}
+            {% assign women_product = block.settings.women_product %}
+            <div class="men-women-tab flex">
+              <div class="tab {% if product.tags contains "men" %}active{% endif %}"><a href="{{ men_product.url }}">{{ block.settings.men }}</a></div>
+              <div class="tab {% if product.tags contains "women" %}active{% endif %}"><a href="{{ women_product.url }}">{{ block.settings.women }}</a></div>
+            </div>
+          {% when 'donate' %}
+            <a href="{{ block.settings.donate_url }}" class="donate">
+              <div class="donate-wrapper">
+                <div class="inner">
+                  <img src="{{ block.settings.donate_icon | img_url:'20x' }}" alt="donate">
+                  <span class="donate-text">{{ block.settings.donate_text }}</span>
+                </div>
+                <div class="inner">
+                  <span class="donate-btn">{{ block.settings.donate_btn }}</span>
+                </div>
+              </div>
+            </a>
+          {% when 'how_it_works' %}
+            <div class="hiw">
+              <div class="hiw-title">{{ block.settings.hiw_title }}</div>
+              <div class="hiw-items">
+                <div class="signle-item">
+                  <img src="{{ block.settings.hiw_icon_1 | img_url:'32x' }}" alt="{{ block.settings.hiw_text_1 }}">
+                  <span>{{ block.settings.hiw_text_1 }}</span>
+                </div>
+                <div class="signle-item">
+                  <img src="{{ block.settings.hiw_icon_2 | img_url:'32x' }}" alt="{{ block.settings.hiw_text_2 }}">
+                  <span>{{ block.settings.hiw_text_2 }}</span>
+                </div>
+                <div class="signle-item">
+                  <img src="{{ block.settings.hiw_icon_3 | img_url:'32x' }}" alt="{{ block.settings.hiw_text_3 }}">
+                  <span>{{ block.settings.hiw_text_3 }}</span>
+                </div>
+              </div>
+            </div>
+          {% when 'testimonial' %}
+            {% render 'jeans-testimonial' block: block %}
+          {% when 'aecorner' %}
+            <div class="aecorner">
+              <img src="{{ block.settings.aecorner_image | img_url:'master' }}" alt="{{ block.settings.aecorner_text }}">
+              <div class="aecorner-text">{{ block.settings.aecorner_text }}</div>
+            </div>
           {%- when 'variant_picker' -%}
             {%- unless product.has_only_default_variant -%}
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
                       <fieldset class="js product-form__input">
-                        <legend class="form__label">{{ option.name }}</legend>
-                        {%- for value in option.values -%}
-                          <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                                name="{{ option.name }}"
-                                value="{{ value | escape }}"
-                                form="{{ product_form_id }}"
-                                {% if option.selected_value == value %}checked{% endif %}
-                          >
-                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                            {{ value }}
-                          </label>
-                        {%- endfor -%}
+                        <legend class="form__label">{{ option.name | prepend: ' ' | prepend: block.settings.label_prefix }}</legend>
+                        <div class="flex-wrapper {% if template == 'product.jeans' %}number-size{% endif %}">
+                          {%- for value in option.values -%}
+                            <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                  name="{{ option.name }}"
+                                  value="{{ value | escape }}"
+                                  form="{{ product_form_id }}"
+                                  {% if option.selected_value == value %}checked{% endif %}
+                            >
+                            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                              {{ value }}
+                            </label>
+                          {%- endfor -%}
+                        </div>
                       </fieldset>
                   {%- endfor -%}
                   <script type="application/json">
                     {{ product.variants | json }}
                   </script>
+                  {% if product.options contains 'Size' %}
+                    {% if block.settings.show_size_guide %}
+                      <a href="javascript:;" class="trigger-pop-up btn">{{ block.settings.size_guide_text }}</a>
+                    {% endif %}
+                  {% endif %}
                 </variant-radios>
               {%- else -%}
                 <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
                     <div class="product-form__input product-form__input--dropdown">
                       <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
-                        {{ option.name }}
+                        {{ option.name | prepend: ' ' | prepend: block.settings.label_prefix  }}
                       </label>
                       <div class="select">
                         <select id="Option-{{ section.id }}-{{ forloop.index0 }}"
@@ -363,6 +418,11 @@
                   <script type="application/json">
                     {{ product.variants | json }}
                   </script>
+                  {% if product.options contains 'Size' %}
+                    {% if block.settings.show_size_guide %}
+                      <a class="trigger-pop-up btn">{{ block.settings.size_guide_text }}</a>
+                    {% endif %}
+                  {% endif %}
                 </variant-selects>
               {%- endif -%}
             {%- endunless -%}
@@ -401,7 +461,7 @@
                   <span class="product-form__error-message"></span>
                 </div>
 
-                {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form', data-tl: template  -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   <div class="product-form__buttons">
                     <button
@@ -412,7 +472,11 @@
                     >
                         <span>
                           {%- if product.selected_or_first_available_variant.available -%}
-                            {{ 'products.product.add_to_cart' | t }}
+                            {% if template == 'product.jeans' %}
+                              {{ 'products.product.jeans_add_to_cart' | t }}
+                            {% else %}
+                              {{ 'products.product.add_to_cart' | t }}
+                            {% endif %}
                           {%- else -%}
                             {{ 'products.product.sold_out' | t }}
                           {%- endif -%}
@@ -698,6 +762,301 @@
       "limit": 1
     },
     {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "header",
+          "content": "Testimonial 1"
+        },
+        {
+          "type": "range",
+          "id": "stars_1",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Stars",
+          "default": 5
+        },
+        {
+          "type": "richtext",
+          "id": "testimonial_1",
+          "label": "Testimonial"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_icon_1",
+          "label": "Author icon"
+        },
+        {
+          "type": "text",
+          "id": "author_name_1",
+          "label": "Author name"
+        },
+        {
+          "type": "header",
+          "content": "Testimonial 2"
+        },
+        {
+          "type": "range",
+          "id": "stars_2",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Stars",
+          "default": 5
+        },
+        {
+          "type": "richtext",
+          "id": "testimonial_2",
+          "label": "Testimonial"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_icon_2",
+          "label": "Author icon"
+        },
+        {
+          "type": "text",
+          "id": "author_name_2",
+          "label": "Author name"
+        },
+        {
+          "type": "header",
+          "content": "Testimonial 3"
+        },
+        {
+          "type": "range",
+          "id": "stars_3",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Stars",
+          "default": 5
+        },
+        {
+          "type": "richtext",
+          "id": "testimonial_3",
+          "label": "Testimonial"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_icon_3",
+          "label": "Author icon"
+        },
+        {
+          "type": "text",
+          "id": "author_name_3",
+          "label": "Author name"
+        },
+        {
+          "type": "header",
+          "content": "Testimonial 4"
+        },
+        {
+          "type": "range",
+          "id": "stars_4",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Stars",
+          "default": 5
+        },
+        {
+          "type": "richtext",
+          "id": "testimonial_4",
+          "label": "Testimonial"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_icon_4",
+          "label": "Author icon"
+        },
+        {
+          "type": "text",
+          "id": "author_name_4",
+          "label": "Author name"
+        },
+        {
+          "type": "header",
+          "content": "Testimonial 5"
+        },
+        {
+          "type": "range",
+          "id": "stars_5",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Stars",
+          "default": 5
+        },
+        {
+          "type": "richtext",
+          "id": "testimonial_5",
+          "label": "Testimonial"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_icon_5",
+          "label": "Author icon"
+        },
+        {
+          "type": "text",
+          "id": "author_name_5",
+          "label": "Author name"
+        },
+        {
+          "type": "header",
+          "content": "Testimonial 6"
+        },
+        {
+          "type": "range",
+          "id": "stars_6",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Stars",
+          "default": 5
+        },
+        {
+          "type": "richtext",
+          "id": "testimonial_6",
+          "label": "Testimonial"
+        },
+        {
+          "type": "image_picker",
+          "id": "author_icon_6",
+          "label": "Author icon"
+        },
+        {
+          "type": "text",
+          "id": "author_name_6",
+          "label": "Author name"
+        }
+      ]
+    },
+    {
+      "type": "aecorner",
+      "name": "Aecorner",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "aecorner_image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "aecorner_text",
+          "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "how_it_works",
+      "name": "How it works",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "hiw_title",
+          "label": "Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "hiw_icon_1",
+          "label": "Icon 1"
+        },
+        {
+          "type": "text",
+          "id": "hiw_text_1",
+          "label": "Text 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "hiw_icon_2",
+          "label": "Icon 2"
+        },
+        {
+          "type": "text",
+          "id": "hiw_text_2",
+          "label": "Text 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "hiw_icon_3",
+          "label": "Icon 3"
+        },
+        {
+          "type": "text",
+          "id": "hiw_text_3",
+          "label": "Text 3"
+        }
+      ]
+    },
+    {
+      "type": "donate",
+      "name": "Donate",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "donate_icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "donate_text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "donate_btn",
+          "label": "Button"
+        },
+        {
+          "type": "url",
+          "id": "donate_url",
+          "label": "URL"
+        }
+      ]
+    },
+    {
+      "type": "men_women",
+      "name": "Men & Women tab",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "men",
+          "label": "Men text",
+          "default": "Men"
+        },
+        {
+          "type": "product",
+          "id": "men_product",
+          "label": "Men Product"
+        },
+        {
+          "type": "text",
+          "id": "women",
+          "label": "Women text",
+          "default": "Women"
+        },
+        {
+          "type": "product",
+          "id": "women_product",
+          "label": "Women Product"
+        }
+      ]
+    },
+    {
       "type": "variant_picker",
       "name": "t:sections.main-product.blocks.variant_picker.name",
       "limit": 1,
@@ -717,6 +1076,22 @@
           ],
           "default": "button",
           "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
+        },
+        {
+          "type": "text",
+          "id": "label_prefix",
+          "label": "Label prefix",
+          "default": "Select"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_size_guide",
+          "label": "Show size guide"
+        },
+        {
+          "type": "text",
+          "id": "size_guide_text",
+          "label": "Size guide text"
         }
       ]
     },
@@ -737,7 +1112,15 @@
     {
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Description"
+        }
+      ]
     },
     {
       "type": "share",

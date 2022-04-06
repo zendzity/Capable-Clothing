@@ -41,3 +41,6 @@
 .collection__view-all {
   margin-top: 2rem;
 }
+#ProductGridContainer #product-grid {
+  justify-content: center;
+}

@@ -16,6 +16,47 @@
   }
 {%- endstyle -%}
 
+{% if template == 'product.jeans' %}
+  <style>
+    .multi-column-custom-title {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 130%;
+      letter-spacing: -0.01em;
+      text-align: left;
+    }
+    .custom-multicolumn .multicolumn-card__info {
+      padding: 0 !important;
+      text-align: left;
+    }
+    .multicolumn-card__info .link {
+      font-size: 32px;
+      line-height: 100%;
+      letter-spacing: -0.04em;
+      font-weight: 600;
+    }
+    .multicolumn-card__info .link .icon-arrow {
+      width: 2.5rem;
+    }
+    .background-none .multicolumn-card__image-wrapper {
+      margin: 0 !important;
+    }
+    .custom-multicolumn {
+      width: 65%;
+    }
+    .multicolumn .title-wrapper-with-link {
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 749px) {
+      .custom-multicolumn {
+        width: 100%;
+      } 
+      .multicolumn-card__info .link {
+        font-size: 24px;
+      }
+    }
+  </style>
+{% endif %}
 {%- liquid
   assign columns_mobile_int = section.settings.columns_mobile | plus: 0
   assign show_mobile_slider = false

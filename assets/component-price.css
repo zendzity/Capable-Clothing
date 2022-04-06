@@ -93,3 +93,17 @@
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
 }
+
+/* custom */
+.price--large {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 130%;
+  letter-spacing: -0.03em;
+  color: #FE0D0E;
+}
+@media (max-width: 749px) {
+  .price--large {
+    font-size: 20px;
+  } 
+}

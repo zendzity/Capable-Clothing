@@ -1,0 +1,129 @@
+<div class="jeans-testimonial">
+	<div class="title">{{ block.settings.title }}</div>
+	<div class="jeans-testimonial-slider">
+	<ul>
+	{% for i in (1..6) %}
+		{%- liquid
+			assign stars = 'stars_' | append: i
+			assign testimonial = 'testimonial_' | append: i
+			assign author_icon = 'author_icon_' | append: i
+			assign author_name = 'author_name_' | append: i
+		-%}
+		{% if block.settings[testimonial] != '' %}
+			{% if i == 4 %}
+				</ul><ul>
+			{% endif %}
+			<li class="testimonial">
+				<div class="stars">
+					{% for j in (1..5) %}
+						{% if j > block.settings[stars] %}
+							{% break %}
+						{% else %}
+							<img src="{{'star.png' | asset_url }}" />    
+						{% endif %}
+					{% endfor %}
+				</div>
+				<div class="description">{{block.settings[testimonial]}}</div>
+				<div class="author-group">
+					<div class="authoricon"><img src="{{block.settings[author_icon] | img_url:'40x' }}" alt="{{block.settings[author_name]}}" title="{{block.settings[author_name]}}" /></div>
+					<div class="authorname">{{block.settings[author_name]}}</div>
+				</div>
+				{%- comment -%}<div class="empty-space"></div>{%- endcomment -%}
+			</li>
+		{% endif %}
+	{% endfor %}
+	</ul>
+	</div>  
+</div>
+<style>
+	.jeans-testimonial {
+		padding-bottom: 30px;
+	}
+	.jeans-testimonial .title {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 130%;
+		letter-spacing: -0.01em;
+		margin-top: 3rem;
+	}
+	.jeans-testimonial .description {
+		font-style: italic;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 150%;
+		color: #0E1C2C;
+	}
+	.jeans-testimonial .authorname {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 150%;
+		letter-spacing: -0.01em;
+		color: #0E1C2C;
+	}
+	.jeans-testimonial .authoricon img {
+		border-radius: 50%;
+	}
+	.jeans-testimonial .author-group {
+		display: flex;
+		align-items: center;
+	}
+	.jeans-testimonial .authoricon {
+		line-height: 1;
+		margin-right: 15px;
+		display: block;
+	}
+	.jeans-testimonial .stars {
+		line-height: 1;
+		display: flex;
+	}
+	.jeans-testimonial .testimonial {
+		margin-bottom: 40px;
+		display: inline-block;
+	}
+	.jeans-testimonial-slider ul {
+		padding: 0;
+		margin: 0;
+	}
+	.jeans-testimonial .slick-arrow svg {
+		height: 1rem;
+		top: calc(50% - 0.5rem);
+		position: absolute;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+	}
+	.jeans-testimonial .slick-arrow {
+		position: absolute;
+		bottom: -15px;
+		right: 0;
+		cursor: pointer;
+	}
+	.jeans-testimonial .left-arrow {
+		right: 70px;
+		z-index: 99;
+	}
+	.jeans-testimonial .left-arrow svg {
+		transform: rotate(90deg);
+	}
+	.jeans-testimonial .right-arrow svg {
+		transform: rotate(-90deg);
+	}
+	.jeans-testimonial .slick-arrow .arrow-wrapper {
+		width: 50px;
+		height: 50px;
+		border: 0.5px solid #A2A2A2;
+		border-radius: 50%;
+		position: relative;
+	}
+</style>
+<script>
+	$(document).ready(function() {
+      	$(".jeans-testimonial-slider").slick({
+			infinite: true,
+			slidesToScroll: 1,
+			slidesToShow: 1,
+			prevArrow: '<div class="left-arrow"><div class="arrow-wrapper"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></svg></div></div>',
+			nextArrow: '<div class="right-arrow"><div class="arrow-wrapper"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></svg></div></div>'
+		})
+	})
+</script>
