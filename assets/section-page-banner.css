@@ -49,7 +49,21 @@
 .page-banner-wrapper .mobile-none-page-width {
 	display: flex;
 }
+.page-banner-wrapper .global-media-settings {
+	border: none;
+}
+.page-banner-wrapper .deferred-media__poster-button svg {
+	color: #FE0D0E;
+}
 @media (max-width: 749px) {
+	.page-banner-wrapper .deferred-media__poster-button {
+		width: 48px;
+    	height: 48px;
+	}
+	.page-banner-wrapper .deferred-media__poster-button svg {
+		width: 1.5rem;
+    	height: 1.5rem;
+	}
 	.page-banner-wrapper .main-wrapper {
 		flex-direction: column;
 	}
