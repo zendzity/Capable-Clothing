@@ -28,7 +28,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Learn More About These Jeans",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify:\/\/collections\/adapable-jeans",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -102,7 +102,7 @@
         "1648375697942bc8d2-0": {
           "type": "column",
           "settings": {
-            "stars": 4,
+            "stars": 3,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
             "image": "shopify:\/\/shop_images\/Ellipse_7.png",
             "title": "Annette Black"
@@ -262,7 +262,7 @@
         "16484013892dda62d7-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": "jeans"
+            "collection": "adapable-jeans"
           }
         },
         "16484013892dda62d7-1": {
