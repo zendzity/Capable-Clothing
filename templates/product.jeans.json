@@ -74,7 +74,7 @@
         "description": {
           "type": "description",
           "settings": {
-            "title": "Description"
+            "title": "Features"
           }
         },
         "fa01d9da-694c-4874-983e-4ca99114dd3b": {
@@ -87,9 +87,9 @@
         "b66a8fb0-4ec0-4374-b440-06555157e545": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Features",
+            "heading": "Description",
             "icon": "none",
-            "content": "<p>Feature content<\/p>",
+            "content": "<p>Our capable premium denim jeans offer one of a kind features; such as our glide side zippers and our sturdy zipper which provides easy access to your undergarments, urine and ostomy bags, and straight cath as well as providing comfort during your motor skills. Other features such as the elasticized waistband protects the prevention of sliding during the transferring process, while the <em>lift loops <\/em>located in the front creates an easy and safe process for the caretaker to lift and reposition when needed.<\/p>",
             "page": ""
           }
         },

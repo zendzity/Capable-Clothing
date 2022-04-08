@@ -80,4 +80,12 @@
 .deferred-media__poster-button .icon-play {
   margin-left: 0.2rem;
 }
-
+.deferred-media__poster-button {
+  width: 42px;
+  height: 42px;
+}
+.deferred-media__poster-button .icon {
+  color: #FE0D0E;
+  width: 1.5rem;
+  height: 1.5rem;
+}
