@@ -295,3 +295,21 @@
 .card-article-info {
   margin-top: 1rem;
 }
+
+/* Add the custom stylce css 2022.04.11 */
+#ProductGridContainer ul#product-grid li.grid__item .card--card, .card--standard .card__inner { width: 270px; height: 260px; }
+#ProductGridContainer ul#product-grid li.grid__item .card--card, .card--standard .card__inner img{ width: 100%; height: 100%; object-fit: cover; }
+#ProductGridContainer ul#product-grid li.grid__item .card__content .price__container .lbl-taxes-shipping { margin-top: 0px; }
+
+@media (max-width: 1200px) {
+  #ProductGridContainer ul#product-grid li.grid__item .card--card, .card--standard .card__inner { width: calc(100% - 3px); }
+}
+@media (max-width: 425px) {
+  #ProductGridContainer ul#product-grid li.grid__item .card__content .full-unstyled-link { font-size: 16px; }
+  #ProductGridContainer ul#product-grid li.grid__item .card--card, .card--standard .card__inner { height: 187px; }
+  #ProductGridContainer ul#product-grid li.grid__item .card__content .price__container .price__regular {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+  }
+}

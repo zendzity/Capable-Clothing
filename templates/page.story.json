@@ -7,7 +7,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Screen_Shot_2022-04-04_at_7.47_1_1.png",
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+            "video_url": "https:\/\/youtu.be\/4o77dx4qx70"
           }
         }
       },
@@ -95,7 +95,7 @@
     "164905887963234d9c": {
       "type": "text-button",
       "settings": {
-        "heading": "Let's support this underserved community,  by bringing this amazing product to market.",
+        "heading": "Let's support this community by bringing this amazing product to market.",
         "button_label": "Donate",
         "button_link": "shopify:\/\/pages\/donate"
       }

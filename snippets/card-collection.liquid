@@ -54,8 +54,9 @@
               height="{{ card_collection.featured_image.height }}"
               width="{{ card_collection.featured_image.width }}"
               loading="lazy"
-              class="motion-reduce"
+              class="mobile-hide dsk-collection-image motion-reduce"
             >
+            <img class="desktop-hide mob-collection-image" src="{{ card_collection.metafields.my_fields.mobile_collection_image | image_url: width: 165 }}">
           </div>
         </div>
       {%- endif -%}

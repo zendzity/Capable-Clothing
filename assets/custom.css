@@ -1,3 +1,9 @@
+.desktop-hide {
+   display: none;
+}
+.mobile-hide {
+   display: block;
+}
 .headerbutton{
    background: #FFFFFF;
    border: 1px solid #FE0D0E;
@@ -54,7 +60,6 @@
    text-align: center;
    letter-spacing: -0.01em;
    color: #FFFFFF;
-   margin-top: 3rem !important;
    margin-bottom: 3rem;
    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.54);
 }
@@ -135,7 +140,8 @@
    margin-top:20px;
 }
 .mynewsletterbutton{
-   font-weight: 700;
+   font-family: 'Open Sans';
+   font-weight: 600;
    font-size: 16px;
    line-height: 150%;
    text-align: center;
@@ -145,12 +151,6 @@
    background: #FE0D0E;
    border: none;
    padding: 5px 25px;
-}
-.footer-block__newsletter .footer-block__heading{
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 150%;
-   color: #FFFFFF;
 }
 .footer__content-top .grid--4-col-tablet .grid__item:first-child{
    width:40%;
@@ -254,20 +254,17 @@
    color: #000201;
 }
 .footer-block__heading {
+   font-family: 'Open Sans';
+   font-style: normal;
    font-weight: 700;
    font-size: 18px;
    line-height: 150%;
+   /* identical to box height, or 27px */
    color: #F5F5F1;
 }
 .list-menu__item--active {
    text-decoration: none !important;
    text-underline-offset: 0.3rem;
-}
-.footer-block__heading {
-   font-weight: 700;
-   font-size: 18px;
-   line-height: 150%;
-   color: #F5F5F1;
 }
 .copyright__content {
    font-weight: 400;
@@ -284,6 +281,7 @@
    padding-top: 50px;
    padding-bottom: 0;
 }
+
 @media screen and (min-width: 750px){
    .background-none .multicolumn-card__image-wrapper {
       margin-left: -1.5rem !important;
@@ -294,17 +292,35 @@
    }
 }
 @media screen and (max-width:768px) {
+   .desktop-hide {
+      display: block;
+   }
+   .mobile-hide {
+      display: none;
+   }
    .multicolumn-list li:last-child p, .multicolumn-list li:first-child p{
       text-align: left;
    }
    .mainlogoitem {
-      padding-top: 40px;
+      padding-top: 27px;
    }
    .banner__box {
-      padding: 8rem 3.5rem !important;
+      padding: 117px 20px 70px 20px !important;
+      height: 514px !important;
    }
    .multi-column-custom-title{
       font-size: 36px;
+   }
+   .singlelogoitem .logo {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 120%;
+      /* identical to box height, or 29px */
+      text-align: center;
+      letter-spacing: -0.01em;
+      color: #000000;
    }
 }
 @media(max-width:450px){
@@ -341,22 +357,33 @@
       color: #FFFFFF;
    }
    .banner__box .body{
+      font-family: 'Open Sans';
+      font-style: normal;
       font-weight: 600;
       font-size: 20px;
       line-height: 150%;
+      /* or 30px */
+
       text-align: center;
       letter-spacing: -0.01em;
       color: #FFFFFF;
       text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.54);
+      padding: 0 48px;
+      margin-top: 22px !important;
+      margin-bottom: 9px;
    }
    .banner__box .button{
+      font-family: 'Open Sans';
+      font-style: normal;
       font-weight: 800;
-      font-size: 14px;
+      font-size: 16px;
       line-height: 100%;
+      /* identical to box height, or 16px */
       text-align: center;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       color: #FFFFFF;
+      padding: 16px 20px;
    }
    .multicolumn-list h3, .multicolumn-list p{
       font-weight: 400;
@@ -376,6 +403,7 @@
       padding: 2.5rem 2.5rem 1.5rem 0 !important;
    }
    .testimonial-main .title{
+      font-family: 'Open Sans';
       font-weight: 600;
       font-size: 32px !important;
       line-height: 150% !important;
@@ -391,7 +419,7 @@
    }
    .collection-list-wrapper .grid--1-col-tablet-down .grid__item{
       width:49%;
-      max-width:49.5%;
+      max-width:49%;
    }
    .collection-list-wrapper .grid--1-col-tablet-down .grid__item:first-child,.collection-list-wrapper .grid--1-col-tablet-down .grid__item:last-child{
       width:100%;
@@ -411,6 +439,8 @@
    .collage-wrapper-title span{
       font-size: 20px;
       line-height: 120%;
+      display: flex;
+      align-items: center;
    }
    .footer__content-top .grid--4-col-tablet .grid__item{
       width:49%;
@@ -446,9 +476,9 @@
    }
    .collage-wrapper-title img{
       position: relative;
-      top: 10px;
+      top: 0px;
       width: 20px;
-      margin-right: 5px;
+      margin-right: 12px;
       float: left;
    }
    .footer__copyright{
@@ -459,9 +489,6 @@
       font-size: 16px;
       line-height: 150%;
       color: #fff;
-   }
-   .footer-block__details-content{
-      margin-bottom:3rem !important;
    }
    .footer__content-bottom{
       border-top:none !important;
@@ -489,7 +516,8 @@
    }
    .mynewsletterbutton {
       padding: 10px 25px;
-      width: 101%;
+      width: 100%;
+      margin-left: 1px;
    }
    .rightwithlink{
       text-align:left;
@@ -504,7 +532,7 @@
       position: relative;
    }
    .singlelogoitem {
-      margin: 20px 0;
+      margin: 38px 0;
    }
    .innerlogoitem {
       display:inline;

@@ -1,0 +1,96 @@
+<div class="page-width">
+	<div class="product-suggest-section">
+        <h2 class="title">{{ section.settings.heading | escape }}</h2>
+		<img src="{{ section.settings.image | img_url: '720x' }}">
+		<a href="{{ section.settings.link }}" class="section-button">{{ section.settings.button-lable }}<svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+          </path></svg>
+        </a>
+	</div>
+</div>
+{% schema %}
+{
+	"name": "product-suggest",
+	"settings":[
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		},
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading"
+		},
+		{
+			"type": "text",
+			"id": "button-lable",
+			"label": "Button Label"
+		},
+		{
+			"type": "url",
+			"id": "link",
+			"label": "Link"
+		}
+	],
+	"presets":[
+		{
+			"name": "product-suggest"
+		}
+	]
+}
+{% endschema %}
+
+<style>
+    .product-suggest-section {
+        margin-bottom: 80px;
+    }
+    .product-suggest-section  h2.title {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        /* identical to box height, or 26px */
+        letter-spacing: -0.01em;
+        color: #000000;
+        margin-bottom: 16px;
+    }
+    .product-suggest-section {
+        width: 57%;
+    }
+    .product-suggest-section img{
+        width: 100%;
+        margin-bottom: 26px;
+    }
+    .product-suggest-section .section-button{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 100%;
+        /* identical to box height, or 36px */
+        text-align: right;
+        letter-spacing: -0.04em;
+        color: #000201;
+        text-decoration: none;
+    }
+    .product-suggest-section .section-button .icon-arrow {
+        width: 2.5rem;
+        margin-left: 10px;
+    }
+    @media (max-width: 768px) {
+        .product-suggest-section {
+            width: 100%;
+        }
+        .product-suggest-section .section-button{
+            font-size: 24px;
+        }
+        .product-suggest-section img {
+            margin-bottom: 13px;
+        }
+        .product-suggest-section {
+            margin-bottom: 51px;
+        }
+    }
+</style>

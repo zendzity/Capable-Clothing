@@ -49,7 +49,9 @@
                       loading="lazy"
                       width="{{ block.settings.image.width }}"
                       height="{{ block.settings.image.height }}"
+                      class="mobile-hide"
                     >
+                    <img class="desktop-hide" src="{{ block.settings.mob-image | image_url: width: 550 }}">
                   {%- else -%}
                     {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                   {%- endif -%}
@@ -283,7 +285,12 @@
           "id": "image",
           "label": "t:sections.collage.blocks.image.settings.image.label"
         },
-		{
+        {
+          "type": "image_picker",
+          "id": "mob-image",
+          "label": "Mobile Image"
+        },
+		    {
           "type": "url",
           "id": "url",
           "label": "url to post"

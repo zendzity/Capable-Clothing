@@ -258,3 +258,45 @@
 }
 {% endschema %}
 
+<style>
+  .dsk-collection-image {
+    opacity: 1 !important;
+  }
+  .mob-collection-image {
+    opacity: 0 !important;
+  }
+  @media (max-width: 768px) {
+    
+  }
+  @media (max-width: 425px) {
+    .collection-list-title {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 140%;
+      /* or 39px */
+      letter-spacing: -0.03em;
+      color: #000201;
+      text-align: left;
+    }
+    .card__content .full-unstyled-link {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 100%;
+      /* identical to box height, or 20px */
+      text-align: right;
+      letter-spacing: -0.04em;
+      color: #000201;
+      text-align: left;
+    }
+    .collection-list-wrapper .grid--1-col-tablet-down .grid__item:last-child .card__inner {height: 163px;}
+    .card__content .card__information {padding: 16px 0px 29px 0px;}
+    .dsk-collection-image {opacity: 0 !important;}
+    .mob-collection-image {opacity: 1 !important;}
+    .collection-list-wrapper .grid--1-col-tablet-down .grid__item:nth-child(2) {padding-right: 5px;}
+    .collection-list-wrapper .grid--1-col-tablet-down .grid__item:nth-child(3) {padding-left: 5px;}
+  }
+</style>

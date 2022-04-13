@@ -271,3 +271,11 @@ slider-component {
 .slider-button--prev:not([disabled]):hover .icon {
   transform: rotate(90deg) scale(1.1);
 }
+
+
+/* Responsive */
+@media (max-width: 750px) {
+  .slider-buttons {
+    display: none;
+  }
+}

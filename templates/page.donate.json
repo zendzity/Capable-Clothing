@@ -6,19 +6,22 @@
         "f237a79b-f57b-4a41-a5d9-63307765b3ae": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/DSC_0064.png"
+            "image": "shopify:\/\/shop_images\/DSC_0064.png",
+            "video_url": ""
           }
         },
         "bf9ff68f-a02b-4b46-8137-b9896a188abc": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_5_1.png"
+            "image": "shopify:\/\/shop_images\/Rectangle_5_1.png",
+            "video_url": ""
           }
         },
         "c13c7072-d9ca-464d-ae32-d5cbabcbd17e": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/142_0420_1.png"
+            "image": "shopify:\/\/shop_images\/142_0420_1.png",
+            "video_url": ""
           }
         }
       },
@@ -37,7 +40,7 @@
       "type": "special-testimonial",
       "settings": {
         "icon": "shopify:\/\/shop_images\/da21dde662a19a4b8a6e17048660983a.png",
-        "heading": "Testimonials from two veterans",
+        "heading": "Testimonial from one veteran",
         "image": "shopify:\/\/shop_images\/Veteran-_Testimoniald_1.png",
         "text": "<p>”I am a retired Army Veteran, and when Temeka found out that I was in need, she immediately stepped up and donated a pair of her wonderful jeans to me. I had no idea how much a pair of pants could change my life for the better. I am able to use the restroom without assistance again!  My wife loves the lift loops, because it makes my transfers easier. Thank you Capable Clothing for not forgetting about the wounded veterans of America.”<\/p>",
         "author": "~  Sylvester B"
@@ -46,17 +49,57 @@
     "16490619195f1038b0": {
       "type": "title-buttons",
       "settings": {
-        "heading": "Show your support by buying our Adaptable Jeans product",
+        "heading": "Show your support by buying our Adaptable Jeans products",
         "button": "Contact us",
         "button_link": "shopify:\/\/pages\/contact-us",
         "second_button": "Buy Product",
         "second_button_link": "shopify:\/\/products\/capable-premium-denim-jeans"
+      }
+    },
+    "1649429560b80fbffb": {
+      "type": "rich-text",
+      "blocks": {
+        "1649429560eeca8f3a-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "1649429560eeca8f3a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you have questions about donating adaptable jeans, do not hesitate to contact us. <\/p>"
+          }
+        },
+        "1649429560eeca8f3a-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "1649429560eeca8f3a-0",
+        "1649429560eeca8f3a-1",
+        "1649429560eeca8f3a-2"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 64
       }
     }
   },
   "order": [
     "main",
     "16490638444ed47fb3",
-    "16490619195f1038b0"
+    "16490619195f1038b0",
+    "1649429560b80fbffb"
   ]
 }

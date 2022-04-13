@@ -207,12 +207,17 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "product-suggest": {
+      "type": "product-suggest",
+      "settings": {}
     }
   },
   "order": [
     "main",
     "image-with-text",
     "multicolumn",
-    "product-recommendations"
+    "product-recommendations",
+    "product-suggest"
   ]
 }

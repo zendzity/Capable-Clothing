@@ -44,6 +44,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Rectangle_2.png",
+        "image_2": "shopify:\/\/shop_images\/Rectangle_67_9d92c6c0-83c1-4794-808c-799842d74bcf.png",
         "image_overlay_opacity": 40,
         "image_height": "medium",
         "adapt_height_first_image": false,
@@ -66,18 +67,18 @@
             "image": "shopify:\/\/shop_images\/contract_1.png"
           }
         },
-        "16485804212d9a93fe-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Gain Independence",
-            "image": "shopify:\/\/shop_images\/hand_1.png"
-          }
-        },
         "16485804212d9a93fe-2": {
           "type": "heading",
           "settings": {
             "heading": "Comfort and Safety",
             "image": "shopify:\/\/shop_images\/heart_2.png"
+          }
+        },
+        "16485804212d9a93fe-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gain Independence",
+            "image": "shopify:\/\/shop_images\/hand_1.png"
           }
         },
         "16485804212d9a93fe-3": {
@@ -90,8 +91,8 @@
       },
       "block_order": [
         "16485804212d9a93fe-0",
-        "16485804212d9a93fe-1",
         "16485804212d9a93fe-2",
+        "16485804212d9a93fe-1",
         "16485804212d9a93fe-3"
       ],
       "settings": {}
@@ -103,27 +104,27 @@
           "type": "column",
           "settings": {
             "stars": 3,
-            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Ellipse_7.png",
-            "title": "Annette Black"
+            "testimonial": "<p>FINALLY a TRULY accessible pant! Her jeans are so soft and stretchy and have absolutely AMAZING accessible features! Our favorite is the lift loops for a caregiver to help transfer and adjust you!<\/p>",
+            "image": "shopify:\/\/shop_images\/testimonial-2.png",
+            "title": "Hannah K"
           }
         },
         "9c1d381a-a7c4-4c50-963a-668a10f32e1b": {
           "type": "column",
           "settings": {
             "stars": 5,
-            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Ellipse_7_1.png",
-            "title": "Annette Black"
+            "testimonial": "<p>I am in a wheelchair. Not just my legs that don’t work, also my fingers. There are a lot like me. Most people don’t realize how difficult it can be to put pants on, go to the bathroom, pull them up after they have slid down a bit in the back . . . all without standing up. I have a few pairs of Capable pants. Nothing even comes close. Thank you Temeka. <\/p>",
+            "image": "shopify:\/\/shop_images\/testimonial-3.png",
+            "title": "Daniel Campbell"
           }
         },
         "156beb17-0438-4a25-a7ae-ff588cb2b624": {
           "type": "column",
           "settings": {
             "stars": 5,
-            "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
-            "image": "shopify:\/\/shop_images\/Ellipse_7_2.png",
-            "title": "Annette Black"
+            "testimonial": "<p>“As a therapist we think the Capable jeans are absolutely awesome! In regards to the convenience of caregivers, and improved independence to individuals without compromising comfort or style.”<\/p>",
+            "image": "shopify:\/\/shop_images\/testimonial-1.png",
+            "title": "AECorner"
           }
         },
         "9a18119b-e0ed-42ee-b877-298a97e776e0": {
@@ -173,6 +174,7 @@
         },
         "bc601542-01da-44ca-aba7-916dcf92aa5f": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "stars": 5,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
@@ -182,6 +184,7 @@
         },
         "401fc3b6-9aa0-4fba-8034-7e41c7f64d63": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "stars": 5,
             "testimonial": "<p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<\/p>",
@@ -218,6 +221,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_4.png",
+            "mob-image": "shopify:\/\/shop_images\/Rectangle_4.png",
             "title": "",
             "text": "<p>Capable Clothing was founded in 2011 by Temeka Norris RN, to highlight the abilities of individuals living with handicaps, as opposed their disabilities.<\/p>",
             "link_label": "",
@@ -228,6 +232,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_5.png",
+            "mob-image": "shopify:\/\/shop_images\/Rectangle_69.png",
             "title": "",
             "text": "<p>Capable Clothing designs are made to assist individuals with limited abilities, (<strong>spinal cord injury, ostomy bags, rheumatoid arthritis, and the elderly<\/strong>) gain a more independent lifestyle, and reduce injury, and skin breakdown. Capable Clothing also assist the care givers of these individuals by designing clothing that reduce lifting and turning, thus reducing back strain and injury.<\/p>",
             "link_label": "",
@@ -373,6 +378,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_60.png",
+            "mob-image": "shopify:\/\/shop_images\/Rectangle_75.png",
             "url": "https:\/\/facebook.com",
             "image_padding": false
           }
@@ -381,6 +387,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_61.png",
+            "mob-image": "shopify:\/\/shop_images\/Rectangle_64_d1a0cc77-3c4b-4d37-8e3b-1632ed155a23.png",
             "url": "https:\/\/facebook.com",
             "image_padding": false
           }
@@ -389,6 +396,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_63.png",
+            "mob-image": "shopify:\/\/shop_images\/Rectangle_66.png",
             "url": "https:\/\/facebook.com",
             "image_padding": false
           }
@@ -397,6 +405,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_62.png",
+            "mob-image": "shopify:\/\/shop_images\/Rectangle_65.png",
             "url": "https:\/\/facebook.com",
             "image_padding": false
           }
@@ -405,6 +414,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Rectangle_64.png",
+            "mob-image": "shopify:\/\/shop_images\/Rectangle_63_fa1caf24-b380-4cca-8e76-8779efd2b139.png",
             "url": "https:\/\/facebook.com",
             "image_padding": false
           }

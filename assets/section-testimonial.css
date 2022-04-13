@@ -11,6 +11,9 @@
 }
 .authoricon img { 
     display:inline !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 .stars img {
     display:inline-block !important;

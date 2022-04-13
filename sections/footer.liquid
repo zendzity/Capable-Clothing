@@ -150,6 +150,7 @@
                   {%- endif -%}
                 {%- when 'image' -%}
                   <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
+                    {% comment %}
                     {%- if block.settings.image != blank -%}
                       {%- assign image_size = block.settings.image_width | append: 'x' -%}
                       <img
@@ -164,6 +165,13 @@
                     {%- else -%}
                       {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                     {%- endif -%}
+                    {% endcomment %}
+                    {%- assign image_size = block.settings.image_width | append: 'px' -%}
+                    <img src="{{ 'Adaptable_CapableClothing_Logowhite.svg' | asset_url }}"
+                      alt="{{ block.settings.image.alt | escape }}"
+                      loading="lazy"
+                      style="width: {{ image_size }};"
+                    >
                     {%- if section.settings.newsletter_enable -%}
           <div class="footer-block__newsletter">
             {%- if section.settings.newsletter_heading != blank -%}

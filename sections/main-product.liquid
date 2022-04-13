@@ -335,6 +335,15 @@
                 </div>
               </div>
             </a>
+            {% when 'klarna' %}
+              <a href="{{ block.settings.klarna_url }}" class="klarna">
+                <div class="klarna-wrapper">
+                  <div class="inner">
+                    <span class="klarna-text">{{ block.settings.klarna_text }}</span>
+                    <img src="{{ block.settings.klarna_icon | img_url:'180x' }}" alt="klarna">
+                  </div>
+                </div>
+              </a>
           {% when 'how_it_works' %}
             <div class="hiw">
               <div class="hiw-title">{{ block.settings.hiw_title }}</div>
@@ -1028,6 +1037,27 @@
       ]
     },
     {
+      "type": "klarna",
+      "name": "Klarna",
+      "settings": [
+        {
+          "type": "text",
+          "id": "klarna_text",
+          "label": "Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "klarna_icon",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "klarna_url",
+          "label": "URL"
+        }
+      ]
+    },
+    {
       "type": "men_women",
       "name": "Men & Women tab",
       "limit": 1,
@@ -1499,3 +1529,11 @@
   ]
 }
 {% endschema %}
+
+<script>
+  changeH();
+  function changeH() {
+    const h = $('.product__info-wrapper').height();
+    $('main#MainContent').css('min-height', h +'px');
+  }
+</script>

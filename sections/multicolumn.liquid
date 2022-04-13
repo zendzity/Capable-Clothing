@@ -41,14 +41,17 @@
     .background-none .multicolumn-card__image-wrapper {
       margin: 0 !important;
     }
-    .custom-multicolumn {
+    /* .custom-multicolumn {
       width: 65%;
+    } */
+    .custom-multicolumn .slider-mobile-gutter {
+      width: 57%;
     }
     .multicolumn .title-wrapper-with-link {
       margin-bottom: 1.5rem;
       max-width: 72rem;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: unset;
+      margin-right: unset;
     }
     @media (max-width: 749px) {
       .custom-multicolumn {
@@ -68,7 +71,7 @@
   endif
 -%}
 
-<div class="multicolumn custom-multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+<div class="mobile-hide multicolumn custom-multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div class="page-width section-{{ section.id }}-padding isolate">
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
@@ -162,6 +165,65 @@
       {%- endif -%}
     </div>
   </div>
+</div>
+
+<div class="desktop-hide mob-multicolumn">
+  <h2 class="title multi-column-custom-title {{ section.settings.heading_size }}">
+    {{ section.settings.title | escape }}
+  </h2>
+    <div class="multicolumn-image-group">
+      {%- for block in section.blocks -%}
+        <img src="{{ block.settings.mob-image | image_url: width: 550 }}" alt="{{ block.settings.image.alt }}" loading="lazy" >
+      {% endfor %}
+    </div>
+    <div class="multicolumn-text-group">
+      {%- for block in section.blocks -%}
+        <div class="rte">{{ block.settings.text }}</div>
+      {% endfor %}
+    </div>
+
+    <style>
+      @media (max-width: 768px) {
+        .mob-multicolumn .multi-column-custom-title {
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 150%;
+          /* or 48px */
+          text-align: center;
+          letter-spacing: -0.03em;
+          color: #000201;
+          margin: 60px 0px 24px 0px;
+          padding: 0 26px;
+        }
+        .mob-multicolumn .multicolumn-image-group{display: flex;flex-direction: column;}
+        .mob-multicolumn .multicolumn-image-group img{width: 100%;height: 100%;object-fit: contain;}
+        .mob-multicolumn .multicolumn-text-group {margin: 32px 20px 65px;}
+        .mob-multicolumn .multicolumn-text-group .rte:nth-child(1) p{
+          font-family: 'Open Sans';
+          font-style: italic;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 150%;
+          /* or 36px */
+          letter-spacing: -0.01em;
+          color: #000201;
+        }
+        .mob-multicolumn .multicolumn-text-group .rte:nth-child(2) p{
+          font-family: 'Open Sans';
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 150%;
+          /* or 24px */
+          letter-spacing: -0.01em;
+          color: #000201;
+          margin-top: 24px;
+        }
+        .mob-multicolumn .multicolumn-text-group .rte:nth-child(2) p>strong {color: #fe0d0e!important;}
+      }
+    </style>
 </div>
 
 {% schema %}
@@ -380,6 +442,11 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "mob-image",
+          "label": "Mobile Image"
         },
         {
           "type": "text",

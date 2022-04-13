@@ -47,6 +47,9 @@
       <span class="price-item price-item--regular">
         {{ money_price }}
       </span>
+      <div class="lbl-taxes-shipping">
+        <span>{{ settings.lbl_taxes_shipping }}</span>
+      </div>
     </div>
     <div class="price__sale">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}

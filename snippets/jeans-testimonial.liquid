@@ -1,89 +1,112 @@
 <div class="jeans-testimonial">
 	<div class="title">{{ block.settings.title }}</div>
 	<div class="jeans-testimonial-slider">
-	<ul>
-	{% for i in (1..6) %}
-		{%- liquid
+		<ul>
+			{% for i in (1..6) %}
+			{%- liquid
 			assign stars = 'stars_' | append: i
 			assign testimonial = 'testimonial_' | append: i
 			assign author_icon = 'author_icon_' | append: i
 			assign author_name = 'author_name_' | append: i
-		-%}
-		{% if block.settings[testimonial] != '' %}
+			-%}
+			{% if block.settings[testimonial] != '' %}
 			{% if i == 4 %}
-				</ul><ul>
+		</ul>
+		<ul>
 			{% endif %}
-			<li class="testimonial">
-				<div class="stars">
-					{% for j in (1..5) %}
+				<li class="testimonial">
+					<div class="stars">
+						{% for j in (1..5) %}
 						{% if j > block.settings[stars] %}
-							{% break %}
+						{% break %}
 						{% else %}
-							<img src="{{'star.png' | asset_url }}" />    
+						<img src="{{'star.png' | asset_url }}" />
 						{% endif %}
-					{% endfor %}
-				</div>
-				<div class="description">{{block.settings[testimonial]}}</div>
-				<div class="author-group">
-					<div class="authoricon"><img src="{{block.settings[author_icon] | img_url:'40x' }}" alt="{{block.settings[author_name]}}" title="{{block.settings[author_name]}}" /></div>
-					<div class="authorname">{{block.settings[author_name]}}</div>
-				</div>
-				{%- comment -%}<div class="empty-space"></div>{%- endcomment -%}
-			</li>
-		{% endif %}
-	{% endfor %}
-	</ul>
-	</div>  
+						{% endfor %}
+					</div>
+					<div class="description">{{block.settings[testimonial]}}</div>
+					<div class="author-group">
+						<div class="authoricon"><img src="{{block.settings[author_icon] | img_url:'40x' }}"
+								alt="{{block.settings[author_name]}}" title="{{block.settings[author_name]}}" /></div>
+						<div class="authorname">{{block.settings[author_name]}}</div>
+					</div>
+					{%- comment -%}<div class="empty-space"></div>{%- endcomment -%}
+				</li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+		<!-- Swiper -->
+		<!-- <div class="swiper mySwiper">
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		  </div>
+		</div> -->
 </div>
 <style>
 	.jeans-testimonial {
 		padding-bottom: 30px;
 	}
+
 	.jeans-testimonial .title {
+		font-family: 'Open Sans';
+		font-style: normal;
 		font-weight: 600;
-		font-size: 18px;
+		font-size: 20px;
 		line-height: 130%;
+		/* identical to box height, or 26px */
 		letter-spacing: -0.01em;
-		margin-top: 3rem;
+		color: #000000;
 	}
+
 	.jeans-testimonial .description {
+		font-family: 'Open Sans';
 		font-style: italic;
 		font-weight: 400;
-		font-size: 14px;
-		line-height: 150%;
+		font-size: 16px;
+		line-height: 150% ;
+		/* or 24px */
 		color: #0E1C2C;
 	}
+
 	.jeans-testimonial .authorname {
+		font-family: 'Open Sans';
 		font-weight: 600;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 150%;
 		letter-spacing: -0.01em;
 		color: #0E1C2C;
 	}
+
 	.jeans-testimonial .authoricon img {
 		border-radius: 50%;
 	}
+
 	.jeans-testimonial .author-group {
 		display: flex;
 		align-items: center;
 	}
+
 	.jeans-testimonial .authoricon {
 		line-height: 1;
 		margin-right: 15px;
 		display: block;
 	}
+
 	.jeans-testimonial .stars {
 		line-height: 1;
 		display: flex;
 	}
+
 	.jeans-testimonial .testimonial {
 		margin-bottom: 40px;
 		display: inline-block;
 	}
+
 	.jeans-testimonial-slider ul {
 		padding: 0;
 		margin: 0;
 	}
+
 	.jeans-testimonial .slick-arrow svg {
 		height: 1rem;
 		top: calc(50% - 0.5rem);
@@ -92,22 +115,29 @@
 		left: 0;
 		right: 0;
 	}
+
 	.jeans-testimonial .slick-arrow {
 		position: absolute;
 		bottom: -15px;
 		right: 0;
 		cursor: pointer;
+		display: none;
 	}
+
 	.jeans-testimonial .left-arrow {
 		right: 70px;
 		z-index: 99;
+		display: none;
 	}
+
 	.jeans-testimonial .left-arrow svg {
 		transform: rotate(90deg);
 	}
+
 	.jeans-testimonial .right-arrow svg {
 		transform: rotate(-90deg);
 	}
+
 	.jeans-testimonial .slick-arrow .arrow-wrapper {
 		width: 50px;
 		height: 50px;
@@ -117,8 +147,8 @@
 	}
 </style>
 <script>
-	$(document).ready(function() {
-      	$(".jeans-testimonial-slider").slick({
+	$(document).ready(function () {
+		$(".jeans-testimonial-slider").slick({
 			infinite: true,
 			slidesToScroll: 1,
 			slidesToShow: 1,
@@ -126,4 +156,51 @@
 			nextArrow: '<div class="right-arrow"><div class="arrow-wrapper"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></svg></div></div>'
 		})
 	})
+</script>
+
+<!-- Review slider scripts -->
+<style>
+	.jeans-testimonial .swiper {
+		width: 100%;
+		height: 100%;
+	}
+
+	.jeans-testimonial .swiper-slide {
+		text-align: center;
+		font-size: 18px;
+		background: #fff;
+
+		/* Center slide text vertically */
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+
+	.jeans-testimonial .swiper-slide img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+</style>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+	var swiper = new Swiper(".jeans-testimonial .mySwiper", {
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
 </script>

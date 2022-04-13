@@ -436,3 +436,36 @@
 .banner__box > * + .banner__buttons {
   margin-top: 2rem;
 }
+
+/* Begin custom style css for mobile version */
+@media (max-width: 425px) {
+  .banner__content .banner__text.subtitle span {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    /* identical to box height, or 14px */
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FF0201;
+  }
+  .banner__content .banner__box .banner__heading {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 140%;
+    /* or 45px */
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #FFFFFF;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  .banner__content .banner__box {
+    padding: 117px 20px 70px 20px;
+  }
+}
+/* end customs style css for mobile version */

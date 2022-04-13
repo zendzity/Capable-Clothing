@@ -49,14 +49,14 @@
 
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 65%;
-    width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 57%;
+    width: calc(57% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
-    padding-left: 4rem;
-    max-width: 35%;
-    width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
+    padding-left: 52px;
+    max-width: 43%;
+    width: calc(43% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--medium:not(.product--no-media) .product__media-wrapper,
@@ -258,10 +258,6 @@ fieldset.product-form__input .form__label {
   max-width: 25rem;
 }
 
-.product-form__submit {
-  margin-bottom: 1rem;
-}
-
 .no-js .product-form__submit.button--secondary {
   --color-button: var(--color-base-accent-1);
   --color-button-text: var(--color-base-solid-button-labels);
@@ -300,6 +296,17 @@ fieldset.product-form__input .form__label {
   margin: 2.5rem 0;
 }
 
+.product__info-container .product__description ul li {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 200%;
+  /* or 36px */
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
 .product__text {
   margin-bottom: 0;
 }
@@ -312,11 +319,6 @@ a.product__text {
 
 .product__text.caption-with-letter-spacing {
   text-transform: uppercase;
-}
-
-.product__title {
-  word-break: break-word;
-  margin-bottom: 1.5rem;
 }
 
 .product__title + .product__text.caption-with-letter-spacing {
@@ -1158,14 +1160,22 @@ a.product__text {
 }
 
 /* custom */
-.product__title {
+h1.product__title {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
   font-size: 32px;
   line-height: 150%;
+  /* or 48px */
   letter-spacing: -0.03em;
+  color: #000201;
+  word-break: break-word;
+  margin-bottom: 21px;
 }
 fieldset.product-form__input .form__label {
+  font-family: 'Open Sans';
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 130%;
   letter-spacing: -0.01em;
   margin-bottom: 24px;
@@ -1196,7 +1206,7 @@ variant-radios .trigger-pop-up.btn, variant-selects .trigger-pop-up.btn {
   order: 2;
 }
 .men-women-tab .tab {
-  border-bottom: 0.5px solid #B7B7B7;
+  border-bottom: 2px solid #b7b7b74d;
 }
 .men-women-tab .tab.active {
   border-bottom: 2px solid #000000;
@@ -1221,7 +1231,12 @@ variant-radios .trigger-pop-up.btn, variant-selects .trigger-pop-up.btn {
   border: 1px solid #C4C4C4;
   border-radius: 0;
   width: calc(100% / 3 - 10px);
+  height: 46px;
   margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
 }
 .product-form__input .flex-wrapper.number-size input[type='radio'] + label {
@@ -1250,7 +1265,7 @@ variant-radios .trigger-pop-up.btn, variant-selects .trigger-pop-up.btn {
   align-items: center;
   justify-content: space-between;
   background: #FCF1F1;
-  padding: 15px;
+  padding: 14px 15px;
 }
 .product__info-container .donate .donate-wrapper .inner:first-child {
   display: flex;
@@ -1260,25 +1275,35 @@ variant-radios .trigger-pop-up.btn, variant-selects .trigger-pop-up.btn {
   margin-right: 10px;
 }
 .product__info-container .donate .donate-text {
-  font-size: 14px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 150%;
+  /* identical to box height, or 24px */
   letter-spacing: -0.01em;
   color: #0E1C2C;
 }
 .product__info-container .donate .donate-btn {
+  font-family: 'Open Sans';
+  font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
   letter-spacing: 0.04em;
   color: #FE0D0E;
 }
 .product-form__submit {
-  font-weight: 800;
+  height: 56px;
+  font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.04em;
+  margin-bottom: 1rem;
 }
 .hiw-title {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 130%;
   letter-spacing: -0.01em;
   padding-top: 20px;
@@ -1293,31 +1318,37 @@ variant-radios .trigger-pop-up.btn, variant-selects .trigger-pop-up.btn {
   margin-bottom: 15px;
 }
 .hiw-items .signle-item span {
-  font-size: 15px;
-  line-height: 120%;
+  font-family: 'Open Sans';
+  font-size: 20px;
+  line-height: 130%;
   letter-spacing: -0.01em;
   font-weight: 600;
-  margin-left: 12px;
+  margin-left: 22px;
+  color: #000000;
 }
 .product__description.rte ul {
+  font-family: 'Open Sans';
   font-size: 15px;
   line-height: 200%;
   letter-spacing: -0.01em;
 }
 .product__description-title {
+  font-family: 'Open Sans';
   padding-top: 10px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 130%;
   letter-spacing: -.01em;
 }
 .accordion__title {
+  font-family: 'Open Sans';
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 130%;
   letter-spacing: -.01em;
 }
 .product__accordion .accordion__content {
+  font-family: 'Open Sans';
   font-size: 15px;
   line-height: 200%;
   letter-spacing: -.01em;
@@ -1345,18 +1376,65 @@ variant-radios .trigger-pop-up.btn, variant-selects .trigger-pop-up.btn {
   background: #F7F7F7;
 }
 .product__info-container .aecorner .aecorner-text {
+  font-family: 'Open Sans';
   font-size: 11px;
   line-height: 100%;
   letter-spacing: -0.01em;
   margin-left: 10px;
 }
 
+/* Begin klarna section custom style */
+.klarna-wrapper {
+  margin: 0px 0px 15px 0px;
+}
+.klarna-wrapper span.klarna-text {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* identical to box height, or 24px */
+  letter-spacing: -0.01em;
+  color: #000201;
+}
+.klarna-wrapper img {
+  width: 59px;
+  height: 13px;
+  margin-left: 16px;
+}
+a.klarna {
+  text-decoration: none;
+}
+/* End kalarna section custom style */
+
+/* Begin product image custom style css */
+.grid--2-col-tablet .grid__item {
+  padding: 2px;
+  /* width: 415px; */
+}
+/* .product__media-list .deferred-media {
+  height: 100%;
+} */
+.grid--2-col-tablet .grid__item:nth-child(5) {
+  height: 310px;
+}
+.grid--2-col-tablet .grid__item:nth-child(8) {
+  height: 415px;
+}
+.grid--2-col-tablet .grid__item:nth-child(8) .deferred-media {
+  height: 100%;
+} 
+.slider-mobile-gutter ul li.product__media-item:nth-child(7) {
+  display: flex;
+}
+/* End product image custom style css */
+
 @media (max-width: 749px) {
-  .product__title {
+  .product__info-wrapper h1.product__title {
     font-size: 24px;
   }
   .men-women-tab .tab>a {
-    font-size: 18px;
+    font-size: 20px;
   }
   .men-women-tab.flex {
     margin-bottom: 25px;

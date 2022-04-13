@@ -5,7 +5,7 @@
   color: rgb(var(--color-foreground));
 }
 
-.price > * {
+.price>* {
   display: inline-block;
   vertical-align: top;
 }
@@ -41,7 +41,9 @@
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   letter-spacing: 0.13rem;
 }
-
+.custom-multicolumn {
+  padding-top: 30px;
+}
 @media screen and (min-width: 750px) {
   .price--large {
     font-size: 1.8rem;
@@ -96,14 +98,105 @@
 
 /* custom */
 .price--large {
+  font-family: 'Open Sans';
+  font-style: normal;
   font-weight: 600;
   font-size: 28px;
   line-height: 130%;
   letter-spacing: -0.03em;
   color: #FE0D0E;
 }
+
+.price__container .price__regular {
+  display: flex;
+  align-items: center;
+}
+
+.price__container .lbl-taxes-shipping {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  /* identical to box height, or 26px */
+  letter-spacing: -0.03em;
+  color: #000000;
+  margin-left: 14px;
+  margin-top: 7px;
+}
+
+.grid:last-child {
+  position: relative;
+}
+.product--large:not(.product--no-media) .product__info-wrapper {
+  position: absolute;
+  right: 0px;
+}
+@media (max-width: 1200px) { 
+  .product--large:not(.product--no-media) .product__info-wrapper,
+  .grid:last-child {
+    position: unset;
+  }
+}
+.product__info-container .aecorner .aecorner-text p {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  /* identical to box height, or 14px */
+  letter-spacing: -0.01em;
+  color: #000000;
+}
 @media (max-width: 749px) {
   .price--large {
+    font-size: 23px;
+  }
+
+  .price__container .lbl-taxes-shipping {
+    font-size: 16px;
+    margin-top: 0px;
+  }
+
+  .men-women-tab .tab>a {
+    padding: 20px;
+  }
+
+  .klarna-wrapper img {
+    margin-left: 0px;
+  }
+
+  .product__info-container .product-form,
+  .product__info-container .product__description {
+    margin: 0;
+  }
+
+  .product__info-container .donate .donate-text {
+    font-size: 14px;
+  }
+
+  .hiw-title {
+    padding-top: 30px;
+  }
+  .hiw-items .signle-item span {
     font-size: 20px;
-  } 
+  }
+  .product__info-container .aecorner .aecorner-text p{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+  .accordion summary {
+      padding: 23px 0;
+  }
+  .custom-multicolumn .slider-mobile-gutter {
+    width: 100% !important;
+  }
+  .slider.slider--mobile .slider__slide {
+    height: 324px;
+    width: 314px;
+  }
+  .global-media-settings {
+    padding-top: 100% !important;
+  }
 }

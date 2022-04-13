@@ -21,70 +21,222 @@
   endif
 -%}
 
-<div class="testimonial-main color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
-  <div class="page-width section-{{ section.id }}-padding isolate">
-    {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link-no title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
-        <h2 class="title {{ section.settings.heading_size }}">
-          {{ section.settings.title | escape }}
-        </h2>
-        {%- if section.settings.button_label != blank and show_mobile_slider -%}
-          <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
-        {%- endif -%}
-      </div>
-    {%- endunless -%}    
-    <div class="my-slick-testimonial-slider-{{section.id}}">
-    {%- for block in section.blocks -%}
-      <div class="testimonial">
-        <div class="stars">
-          <img src="{{'star.png' | asset_url }}" /><img src="{{'star.png' | asset_url }}" /><img src="{{'star.png' | asset_url }}" /><img src="{{'star.png' | asset_url }}" /><img src="{{'star.png' | asset_url }}" />
+<div class="mobile-hide">
+  <div class="testimonial-main color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+    <div class="page-width section-{{ section.id }}-padding isolate">
+      {%- unless section.settings.title == blank -%}
+        <div class="title-wrapper-with-link-no title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+          <h2 class="title {{ section.settings.heading_size }}">
+            {{ section.settings.title | escape }}
+          </h2>
+          {%- if section.settings.button_label != blank and show_mobile_slider -%}
+            <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
+          {%- endif -%}
         </div>
-        <div class="description">{{block.settings.testimonial}}</div>
-        <div class="authoricon"><img src="{{block.settings.image | img_url:'100x' }}" alt="{{block.settings.title}}" title="{{block.settings.title}}" /></div>
-        <div class="authorname">{{block.settings.title}}</div>
-      </div>
-    {% endfor %}
-    </div>    
+      {%- endunless -%}    
+      <div class="my-slick-testimonial-slider-{{section.id}}">
+      {%- for block in section.blocks -%}
+        <div class="testimonial">
+          <div class="stars">
+            <img src="{{'star.png' | asset_url }}" /><img src="{{'star.png' | asset_url }}" /><img src="{{'star.png' | asset_url }}" /><img src="{{'star.png' | asset_url }}" /><img src="{{'star.png' | asset_url }}" />
+          </div>
+          <div class="description">{{block.settings.testimonial}}</div>
+          <div class="authoricon"><img src="{{block.settings.image | img_url:'100x' }}" alt="{{block.settings.title}}" title="{{block.settings.title}}" /></div>
+          <div class="authorname">{{block.settings.title}}</div>
+        </div>
+      {% endfor %}
+      </div>    
+    </div>
   </div>
+
+  <script>
+    $('.my-slick-testimonial-slider-{{section.id}}').slick({
+      infinite: true,
+        autoplay:false,
+        autoplaySpeed:10000,    
+        slidesToShow: 3,dots: true,
+        prevArrow: '<div class="leftarrow"><img src="{{"left-arrow.png" | asset_url}}" /></div>',
+        nextArrow: '<div class="rightarrow"><img src="{{"right-arrow.png" | asset_url}}" /></div>',
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+              vertical: true,
+              verticalSwiping: true,
+              slidesToScroll: 1
+            }
+          }   
+        ]
+    });
+  </script>
 </div>
-<script>
-  $('.my-slick-testimonial-slider-{{section.id}}').slick({
-  infinite: true,
-    autoplay:false,
-    autoplaySpeed:10000,    
-  slidesToShow: 3,dots: true,
-    prevArrow: '<div class="leftarrow"><img src="{{"left-arrow.png" | asset_url}}" /></div>',
-    nextArrow: '<div class="rightarrow"><img src="{{"right-arrow.png" | asset_url}}" /></div>',
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
+
+<div class="desktop-hide">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Demo styles -->
+  <style>
+    .homepage-testimonial .swiper { width: 100%; height: 100%; }
+    .homepage-testimonial .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+
+      display: flex;
+      flex-direction: column;
+    }
+    .homepage-testimonial .swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .homepage-testimonial .swiper-button-next, .homepage-testimonial .swiper-button-prev { display: block;}
+    @media (max-width: 768px) {
+      .homepage-testimonial {margin-top: 60px;padding: 0px 15px;}
+      .homepage-testimonial .testimonial .stars img {width: 20px; margin-right: 1px;}
+      .homepage-testimonial .testimonial .stars {display: flex; justify-content: center;}
+      .homepage-testimonial .testimonial .description {
+        font-family: 'Open Sans';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        /* or 30px */
+        text-align: center;
+        color: #0E1C2C;
       }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
+      .homepage-testimonial .swiper-slide img {width: 40px;b: visible;border-radius: 50%;}
+      .homepage-testimonial .testimonial{margin-top: 36px;}
+      .homepage-testimonial .testimonial .authorname {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        /* identical to box height, or 24px */
+        letter-spacing: -0.01em;
+        color: #0E1C2C;
+        margin-top: 14px;
       }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        vertical: true,
-        verticalSwiping: true,
-        slidesToScroll: 1
+      .homepage-testimonial .testimonial {margin: 13px 0px 38px 0px;}
+      .homepage-testimonial .title-wrapper--no-top-margin>.title {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 150%;
+        /* or 48px */
+        text-align: center;
+        letter-spacing: -0.03em;
+        color: #000201;
+        padding: 0 20px;
       }
-    }   
-  ]
-});
-</script>
+      .homepage-testimonial .swiper-slide-actions .swiper-button-next, .homepage-testimonial .swiper-slide-actions .swiper-button-prev {position: unset;}
+      .homepage-testimonial .swiper-slide-actions {display: flex; justify-content: space-around; z-index: 100;margin-top: 30px;}
+      .homepage-testimonial .swiper-slide-actions .swiper-button-next, .homepage-testimonial .swiper-slide-actions .swiper-button-prev {
+        border-style: solid;
+        border-width: 1px;
+        border-color: #000;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        z-index: 100;
+      }
+      .homepage-testimonial .swiper-slide-actions .swiper-button-next::after, .homepage-testimonial .swiper-slide-actions .swiper-button-prev::after {font-size: 20px;color: #000;}
+      .homepage-testimonial .swiper-pagination-bullet { background: #814a4a; }
+      .homepage-testimonial .swiper-pagination-bullet-active {background: #FE0D0E;}
+    }
+  </style>
+
+  <div class="homepage-testimonial">
+    {%- unless section.settings.title == blank -%}
+    <div class="title-wrapper-with-link-no title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+      <h2 class="title {{ section.settings.heading_size }}">
+        {{ section.settings.title | escape }}
+      </h2>
+      {%- if section.settings.button_label != blank and show_mobile_slider -%}
+        <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
+      {%- endif -%}
+    </div>
+    {%- endunless -%}  
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          {% assign m = forloop.index | modulo: 2 %}
+          {% if m == 1 %}
+          <div class="swiper-slide">
+          {% endif %}
+
+          <div class="testimonial">
+            <div class="stars">
+              <img src="{{'star.png' | asset_url }}" /><img src="{{'star.png' | asset_url }}" /><img src="{{'star.png' | asset_url }}" /><img src="{{'star.png' | asset_url }}" /><img src="{{'star.png' | asset_url }}" />
+            </div>
+            <div class="description">{{block.settings.testimonial}}</div>
+            <div class="authoricon"><img src="{{block.settings.image | img_url:'100x' }}" alt="{{block.settings.title}}" title="{{block.settings.title}}" /></div>
+            <div class="authorname">{{block.settings.title}}</div>
+          </div>
+
+          {% if m == 0 or forloop.index == forloop.length %}
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="swiper-slide-actions">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".homepage-testimonial .mySwiper", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+</div>
+
 {% schema %}
 {
   "name": "Testimonial",
@@ -241,3 +393,19 @@
   ]
 }
 {% endschema %}
+
+<style>
+  @media (max-width: 768px) {
+    .homepage-testimonial .slick-track {
+      display: flex;
+      flex-direction: column;
+    }
+    .homepage-testimonial .slick-track .slick-slide {
+      width: 100% !important;
+    }
+    .testimonial-main .slick-slide {
+      margin: 0;
+      padding: 0 15px;
+    }
+  }
+</style>
